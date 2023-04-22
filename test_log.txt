@@ -8,23 +8,8 @@ Executing command '255' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'save' ...
-=================================================================
-==55886==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55886==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55886==ABORTING
+Images differ at pixel (0, 0)
+255 0 0 vs 0 0 0
 >>>> [2] add2 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
@@ -56,23 +41,8 @@ Executing command '255' ...
 Executing command '400' ...
 Executing command '400' ...
 Executing command 'save' ...
-=================================================================
-==55888==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55888==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55888==ABORTING
+Images differ at pixel (0, 0)
+0 0 255 vs 0 0 0
 >>>> [3] add3 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
@@ -104,23 +74,8 @@ Executing command '255' ...
 Executing command '400' ...
 Executing command '400' ...
 Executing command 'save' ...
-=================================================================
-==55890==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55890==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55890==ABORTING
+Images differ at pixel (0, 0)
+255 255 255 vs 0 0 0
 >>>> [4] add4 <<<<
 Executing command 'open' ...
 Executing command 'add' ...
@@ -145,23 +100,8 @@ Executing command '255' ...
 Executing command '601' ...
 Executing command '100' ...
 Executing command 'save' ...
-=================================================================
-==55892==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55892==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55892==ABORTING
+Images differ at pixel (0, 0)
+127 102 71 vs 124 164 163
 >>>> [5] add5 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
@@ -186,125 +126,35 @@ Executing command '255' ...
 Executing command '600' ...
 Executing command '225' ...
 Executing command 'save' ...
-=================================================================
-==55896==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55896==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55896==ABORTING
+Images differ at pixel (0, 0)
+255 255 255 vs 0 0 0
 >>>> [6] basic_blank1 <<<<
 Executing command 'blank' ...
 Executing command 'save' ...
-=================================================================
-==55898==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55898==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55898==ABORTING
+Images differ at pixel (0, 0)
+255 0 0 vs 0 0 0
 >>>> [7] basic_blank2 <<<<
 Executing command 'blank' ...
 Executing command 'save' ...
-=================================================================
-==55900==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55900==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55900==ABORTING
+Images differ at pixel (0, 0)
+255 255 0 vs 0 0 0
 >>>> [8] basic_blank3 <<<<
 Executing command 'blank' ...
 Executing command 'blank' ...
 Executing command 'save' ...
-=================================================================
-==55902==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55902==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55902==ABORTING
+Images differ at pixel (0, 0)
+255 0 0 vs 0 0 0
 >>>> [9] basic_open1 <<<<
 Executing command 'open' ...
 Executing command 'save' ...
-=================================================================
-==55904==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55904==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55904==ABORTING
+Images differ at pixel (100, 2)
+0 0 0 vs 255 255 255
 >>>> [10] basic_open2 <<<<
 Executing command 'open' ...
 Executing command 'open' ...
 Executing command 'save' ...
-=================================================================
-==55906==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55906==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55906==ABORTING
+Images differ at pixel (1, 0)
+244 225 225 vs 219 134 137
 >>>> [11] crop1 <<<<
 Executing command 'open' ...
 Executing command 'crop' ...
@@ -313,23 +163,7 @@ Executing command '0' ...
 Executing command '300' ...
 Executing command '300' ...
 Executing command 'save' ...
-=================================================================
-==55908==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55908==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55908==ABORTING
+Images have different dimensions: 300x300 != 600x600
 >>>> [12] crop2 <<<<
 Executing command 'open' ...
 Executing command 'crop' ...
@@ -338,23 +172,7 @@ Executing command '0' ...
 Executing command '100' ...
 Executing command '150' ...
 Executing command 'save' ...
-=================================================================
-==55910==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55910==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55910==ABORTING
+Images have different dimensions: 100x150 != 399x357
 >>>> [13] crop3 <<<<
 Executing command 'open' ...
 Executing command 'crop' ...
@@ -368,23 +186,7 @@ Executing command '50' ...
 Executing command '100' ...
 Executing command '100' ...
 Executing command 'save' ...
-=================================================================
-==55915==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55915==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55915==ABORTING
+Images have different dimensions: 100x100 != 600x600
 >>>> [14] crop4 <<<<
 Executing command 'open' ...
 Executing command 'crop' ...
@@ -393,23 +195,7 @@ Executing command '300' ...
 Executing command '300' ...
 Executing command '300' ...
 Executing command 'save' ...
-=================================================================
-==55917==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55917==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55917==ABORTING
+Images have different dimensions: 300x300 != 600x600
 >>>> [15] crop5 <<<<
 Executing command 'open' ...
 Executing command 'crop' ...
@@ -423,23 +209,7 @@ Executing command '50' ...
 Executing command '400' ...
 Executing command '400' ...
 Executing command 'save' ...
-=================================================================
-==55919==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55919==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55919==ABORTING
+Images have different dimensions: 400x400 != 600x600
 >>>> [16] crop6 <<<<
 Executing command 'open' ...
 Executing command 'crop' ...
@@ -458,23 +228,7 @@ Executing command '300' ...
 Executing command '100' ...
 Executing command '100' ...
 Executing command 'save' ...
-=================================================================
-==55921==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55921==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55921==ABORTING
+Images have different dimensions: 100x100 != 600x600
 >>>> [17] extra1 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
@@ -514,23 +268,8 @@ Executing command '255' ...
 Executing command 'invert' ...
 Executing command 'invert' ...
 Executing command 'save' ...
-=================================================================
-==55923==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55923==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55923==ABORTING
+Images differ at pixel (0, 0)
+255 255 255 vs 0 0 0
 >>>> [18] extra2 <<<<
 Executing command 'blank' ...
 Executing command 'add' ...
@@ -575,46 +314,51 @@ Executing command 'v_mirror' ...
 Executing command 'h_mirror' ...
 Executing command 'invert' ...
 Executing command 'save' ...
-=================================================================
-==55925==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55925==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55925==ABORTING
+Images differ at pixel (0, 0)
+255 255 255 vs 0 0 0
 >>>> [19] extra3 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 Executing command 'rotate_left' ...
 Executing command 'h_mirror' ...
 Executing command 'save' ...
-=================================================================
-==55927==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55927==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55927==ABORTING
+Executing command 'open' ...
+Executing command 'rotate_right' ...
+Executing command 'v_mirror' ...
+Executing command 'invert' ...
+Executing command 'save' ...
+Executing command 'blank' ...
+Executing command 'add' ...
+Executing command 'output/extra3-tmp2.png' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command 'add' ...
+Executing command 'output/extra3-tmp1.png' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '772' ...
+Executing command '0' ...
+Executing command 'add' ...
+Executing command 'output/extra3-tmp1.png' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '800' ...
+Executing command 'add' ...
+Executing command 'output/extra3-tmp2.png' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '0' ...
+Executing command '772' ...
+Executing command '800' ...
+Executing command 'save' ...
+Images differ at pixel (0, 0)
+0 1 13 vs 255 254 242
 >>>> [20] extra4 <<<<
 Executing command 'blank' ...
 Executing command 'fill' ...
@@ -663,23 +407,8 @@ Executing command '255' ...
 Executing command '500' ...
 Executing command '0' ...
 Executing command 'save' ...
-=================================================================
-==55929==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55929==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55929==ABORTING
+Images differ at pixel (0, 0)
+255 0 0 vs 0 0 0
 >>>> [21] fill1 <<<<
 Executing command 'open' ...
 Executing command 'fill' ...
@@ -691,23 +420,8 @@ Executing command '0' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'save' ...
-=================================================================
-==55932==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55932==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55932==ABORTING
+Images differ at pixel (1, 0)
+244 225 225 vs 219 134 137
 >>>> [22] fill2 <<<<
 Executing command 'open' ...
 Executing command 'fill' ...
@@ -735,23 +449,8 @@ Executing command '0' ...
 Executing command '0' ...
 Executing command '255' ...
 Executing command 'save' ...
-=================================================================
-==55934==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55934==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55934==ABORTING
+Images differ at pixel (0, 0)
+255 0 0 vs 219 134 137
 >>>> [23] fill3 <<<<
 Executing command 'open' ...
 Executing command 'fill' ...
@@ -763,23 +462,8 @@ Executing command '0' ...
 Executing command '255' ...
 Executing command '0' ...
 Executing command 'save' ...
-=================================================================
-==55936==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55936==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55936==ABORTING
+Images differ at pixel (0, 0)
+0 255 0 vs 219 134 137
 >>>> [24] fill4 <<<<
 Executing command 'blank' ...
 Executing command 'fill' ...
@@ -831,237 +515,72 @@ Executing command '128' ...
 Executing command '128' ...
 Executing command '128' ...
 Executing command 'save' ...
-=================================================================
-==55938==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55938==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55938==ABORTING
+Images differ at pixel (0, 0)
+0 0 255 vs 0 0 0
 >>>> [25] h_mirror1 <<<<
 Executing command 'open' ...
 Executing command 'h_mirror' ...
 Executing command 'save' ...
-=================================================================
-==55940==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55940==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55940==ABORTING
+Images differ at pixel (488, 39)
+250 250 250 vs 255 255 255
 >>>> [26] h_mirror2 <<<<
 Executing command 'open' ...
 Executing command 'h_mirror' ...
 Executing command 'h_mirror' ...
 Executing command 'save' ...
-=================================================================
-==55942==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55942==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55942==ABORTING
+Images differ at pixel (131, 39)
+253 253 253 vs 255 255 255
 >>>> [27] h_mirror3 <<<<
 Executing command 'open' ...
 Executing command 'h_mirror' ...
 Executing command 'save' ...
-=================================================================
-==55944==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55944==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55944==ABORTING
+Images differ at pixel (0, 0)
+216 216 228 vs 182 170 174
 >>>> [28] h_mirror4 <<<<
 Executing command 'open' ...
 Executing command 'h_mirror' ...
 Executing command 'save' ...
-=================================================================
-==55946==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55946==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55946==ABORTING
+Images differ at pixel (426, 0)
+254 254 254 vs 255 255 255
 >>>> [29] invert1 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 Executing command 'save' ...
-=================================================================
-==55950==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55950==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55950==ABORTING
+Images differ at pixel (0, 0)
+157 157 157 vs 77 77 77
 >>>> [30] invert2 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 Executing command 'invert' ...
 Executing command 'save' ...
-=================================================================
-==55952==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55952==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55952==ABORTING
+Images differ at pixel (0, 0)
+98 98 98 vs 77 77 77
 >>>> [31] invert3 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 Executing command 'save' ...
-=================================================================
-==55954==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55954==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55954==ABORTING
+Images differ at pixel (0, 0)
+255 255 255 vs 0 0 0
 >>>> [32] invert4 <<<<
 Executing command 'open' ...
 Executing command 'invert' ...
 Executing command 'save' ...
-=================================================================
-==55956==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55956==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55956==ABORTING
+Images differ at pixel (0, 0)
+1 4 16 vs 255 254 242
 >>>> [33] median_filter1 <<<<
 Executing command 'open' ...
 Executing command 'median_filter' ...
 Executing command '3' ...
 Executing command 'save' ...
-=================================================================
-==55958==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55958==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55958==ABORTING
+Images differ at pixel (0, 0)
+255 245 211 vs 148 75 69
 >>>> [34] median_filter2 <<<<
 Executing command 'open' ...
 Executing command 'median_filter' ...
 Executing command '5' ...
 Executing command 'save' ...
-=================================================================
-==55960==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55960==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55960==ABORTING
+Images differ at pixel (0, 0)
+255 243 210 vs 148 75 69
 >>>> [35] median_filter3 <<<<
 Executing command 'open' ...
 Executing command 'median_filter' ...
@@ -1069,23 +588,8 @@ Executing command '7' ...
 Executing command 'median_filter' ...
 Executing command '3' ...
 Executing command 'save' ...
-=================================================================
-==55962==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55962==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55962==ABORTING
+Images differ at pixel (0, 0)
+46 66 84 vs 17 8 41
 >>>> [36] median_filter4 <<<<
 Executing command 'open' ...
 Executing command 'median_filter' ...
@@ -1093,23 +597,8 @@ Executing command '3' ...
 Executing command 'median_filter' ...
 Executing command '3' ...
 Executing command 'save' ...
-=================================================================
-==55964==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55964==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55964==ABORTING
+Images differ at pixel (0, 0)
+128 128 128 vs 92 92 92
 >>>> [37] median_filter5 <<<<
 Executing command 'open' ...
 Executing command 'median_filter' ...
@@ -1121,23 +610,8 @@ Executing command '3' ...
 Executing command 'median_filter' ...
 Executing command '3' ...
 Executing command 'save' ...
-=================================================================
-==55966==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55966==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55966==ABORTING
+Images differ at pixel (0, 0)
+38 48 114 vs 40 51 119
 >>>> [38] replace1 <<<<
 Executing command 'open' ...
 Executing command 'replace' ...
@@ -1148,23 +622,8 @@ Executing command '255' ...
 Executing command '255' ...
 Executing command '255' ...
 Executing command 'save' ...
-=================================================================
-==55968==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55968==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55968==ABORTING
+Images differ at pixel (0, 0)
+255 255 255 vs 0 0 0
 >>>> [39] replace2 <<<<
 Executing command 'open' ...
 Executing command 'replace' ...
@@ -1175,23 +634,8 @@ Executing command '0' ...
 Executing command '0' ...
 Executing command '0' ...
 Executing command 'save' ...
-=================================================================
-==55970==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55970==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55970==ABORTING
+Images differ at pixel (0, 0)
+0 0 0 vs 255 255 255
 >>>> [40] replace3 <<<<
 Executing command 'open' ...
 Executing command 'replace' ...
@@ -1209,514 +653,288 @@ Executing command '200' ...
 Executing command '200' ...
 Executing command '200' ...
 Executing command 'save' ...
-=================================================================
-==55972==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55972==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55972==ABORTING
+Images differ at pixel (0, 0)
+13 13 13 vs 255 255 255
 >>>> [41] rotate_left1 <<<<
 Executing command 'open' ...
 Executing command 'rotate_left' ...
 Executing command 'save' ...
-=================================================================
-==55974==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55974==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55974==ABORTING
+Images differ at pixel (30, 32)
+255 3 3 vs 255 255 255
 >>>> [42] rotate_left2 <<<<
 Executing command 'open' ...
 Executing command 'rotate_left' ...
 Executing command 'rotate_left' ...
 Executing command 'save' ...
-=================================================================
-==55976==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55976==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55976==ABORTING
+Images differ at pixel (137, 1)
+0 0 0 vs 255 255 255
 >>>> [43] rotate_left3 <<<<
 Executing command 'open' ...
 Executing command 'rotate_left' ...
 Executing command 'rotate_left' ...
 Executing command 'rotate_left' ...
 Executing command 'save' ...
-=================================================================
-==55978==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55978==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55978==ABORTING
+Images differ at pixel (135, 8)
+128 128 128 vs 0 0 0
 >>>> [44] rotate_left_rotate_right1 <<<<
 Executing command 'open' ...
 Executing command 'rotate_left' ...
 Executing command 'rotate_right' ...
 Executing command 'save' ...
-=================================================================
-==55980==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55980==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55980==ABORTING
+Images differ at pixel (100, 2)
+0 0 0 vs 255 255 255
 >>>> [45] rotate_left_rotate_right2 <<<<
 Executing command 'open' ...
 Executing command 'rotate_left' ...
 Executing command 'rotate_right' ...
 Executing command 'rotate_right' ...
 Executing command 'save' ...
-=================================================================
-==55982==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55982==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55982==ABORTING
+Images have different dimensions: 690x800 != 800x690
 >>>> [46] rotate_right1 <<<<
 Executing command 'open' ...
 Executing command 'rotate_right' ...
 Executing command 'save' ...
-=================================================================
-==55984==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55984==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55984==ABORTING
+Images differ at pixel (94, 33)
+3 3 3 vs 255 255 255
 >>>> [47] rotate_right2 <<<<
 Executing command 'open' ...
 Executing command 'rotate_right' ...
 Executing command 'rotate_right' ...
 Executing command 'save' ...
-=================================================================
-==55986==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55986==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55986==ABORTING
+Images differ at pixel (3, 0)
+184 172 172 vs 182 170 174
 >>>> [48] rotate_right3 <<<<
 Executing command 'open' ...
 Executing command 'rotate_right' ...
 Executing command 'rotate_right' ...
 Executing command 'save' ...
-=================================================================
-==55988==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55988==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55988==ABORTING
+Images differ at pixel (1, 0)
+255 253 241 vs 255 254 242
 >>>> [49] to_gray_scale1 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-=================================================================
-==55990==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55990==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55990==ABORTING
+Images differ at pixel (150, 25)
+170 170 170 vs 0 0 0
 >>>> [50] to_gray_scale2 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-=================================================================
-==55992==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55992==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55992==ABORTING
+Images differ at pixel (150, 25)
+170 170 170 vs 0 0 0
 >>>> [51] to_gray_scale3 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-=================================================================
-==55994==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55994==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55994==ABORTING
+Images differ at pixel (30, 40)
+255 255 255 vs 0 0 0
 >>>> [52] to_gray_scale4 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-=================================================================
-==55996==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55996==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55996==ABORTING
+Images differ at pixel (0, 0)
+66 66 66 vs 40 51 119
 >>>> [53] v_mirror1 <<<<
 Executing command 'open' ...
 Executing command 'v_mirror' ...
 Executing command 'save' ...
-=================================================================
-==55998==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==55998==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==55998==ABORTING
+Images differ at pixel (593, 14)
+241 241 241 vs 255 255 255
 >>>> [54] v_mirror2 <<<<
 Executing command 'open' ...
 Executing command 'v_mirror' ...
 Executing command 'v_mirror' ...
 Executing command 'save' ...
-=================================================================
-==56000==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56000==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56000==ABORTING
+Images differ at pixel (131, 39)
+253 253 253 vs 255 255 255
 >>>> [55] v_mirror3 <<<<
 Executing command 'open' ...
 Executing command 'v_mirror' ...
 Executing command 'save' ...
-=================================================================
-==56002==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56002==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56002==ABORTING
+Images differ at pixel (0, 0)
+200 191 208 vs 182 170 174
 >>>> [56] v_mirror4 <<<<
 Executing command 'open' ...
 Executing command 'v_mirror' ...
 Executing command 'save' ...
-=================================================================
-==56004==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56004==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56004==ABORTING
+Images differ at pixel (0, 0)
+254 250 239 vs 255 254 242
 >>>> [57] xpm2_open1 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/blarg.xpm' ...
 Executing command 'save' ...
 PNG.cpp:31:24: runtime error: member call on null pointer of type 'prog::Image'
 SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:31:24 in 
-Image.cpp:15:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:15:14 in 
-PNG.cpp:32:24: runtime error: member call on null pointer of type 'prog::Image'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:32:24 in 
-Image.cpp:11:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:11:14 in 
+Image.cpp:17:14: runtime error: member call on null pointer of type 'const prog::Image *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:17:14 in 
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==56006==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
+==56405==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x00010016ca7c bp 0x00016fcb19b0 sp 0x00016fcb1970 T0)
+==56405==The signal is caused by a UNKNOWN memory access.
+==56405==Hint: address points to the zero page.
+    #0 0x10016ca7c in prog::Image::height() const Image.cpp:19
+    #1 0x1001a2760 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:31
+    #2 0x100170c78 in prog::Script::save() Script.cpp:74
+    #3 0x10016e3d8 in prog::Script::run() Script.cpp:48
+    #4 0x10016ab80 in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
+    #5 0x10015a61c in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
+    #6 0x100151ed8 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
+    #7 0x100150310 in main test.cpp:186
+    #8 0x18298fe4c  (<unknown module>)
 
-==56006==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56006==ABORTING
+==56405==Register values:
+ x[0] = 0x000000016fcb1888   x[1] = 0x0000000000000000   x[2] = 0x0000000000000000   x[3] = 0x0000000101d003c0  
+ x[4] = 0x0000000063000000   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000  
+ x[8] = 0x0000000000000000   x[9] = 0x0000000000000004  x[10] = 0x0000000000092220  x[11] = 0x000000000000001d  
+x[12] = 0x0000000100394000  x[13] = 0xffffff0000000000  x[14] = 0x0000000000000000  x[15] = 0x0000000000000000  
+x[16] = 0x0000000300aab400  x[17] = 0x00000001006a40a8  x[18] = 0x0000000000000000  x[19] = 0x000000016fcb1a00  
+x[20] = 0x000000010014fe28  x[21] = 0x0000000100265c80  x[22] = 0x000000016fcb3280  x[23] = 0x0000000182a05000  
+x[24] = 0x00000001de88c3c0  x[25] = 0x0000000000000000  x[26] = 0x0000000000000000  x[27] = 0x0000000000000000  
+x[28] = 0x0000000000000000     fp = 0x000000016fcb19b0     lr = 0x000000010016ca24     sp = 0x000000016fcb1970  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV Image.cpp:19 in prog::Image::height() const
+==56405==ABORTING
 >>>> [58] xpm2_open2 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/squares.xpm' ...
 Executing command 'save' ...
 PNG.cpp:31:24: runtime error: member call on null pointer of type 'prog::Image'
 SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:31:24 in 
-Image.cpp:15:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:15:14 in 
-PNG.cpp:32:24: runtime error: member call on null pointer of type 'prog::Image'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:32:24 in 
-Image.cpp:11:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:11:14 in 
+Image.cpp:17:14: runtime error: member call on null pointer of type 'const prog::Image *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:17:14 in 
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==56008==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
+==56407==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x00010016ca7c bp 0x00016fcb19b0 sp 0x00016fcb1970 T0)
+==56407==The signal is caused by a UNKNOWN memory access.
+==56407==Hint: address points to the zero page.
+    #0 0x10016ca7c in prog::Image::height() const Image.cpp:19
+    #1 0x1001a2760 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:31
+    #2 0x100170c78 in prog::Script::save() Script.cpp:74
+    #3 0x10016e3d8 in prog::Script::run() Script.cpp:48
+    #4 0x10016ab80 in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
+    #5 0x10015a61c in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
+    #6 0x100151ed8 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
+    #7 0x100150310 in main test.cpp:186
+    #8 0x18298fe4c  (<unknown module>)
 
-==56008==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56008==ABORTING
+==56407==Register values:
+ x[0] = 0x000000016fcb1888   x[1] = 0x0000000000000000   x[2] = 0x0000000000000000   x[3] = 0x0000000101d003c0  
+ x[4] = 0x0000000063000000   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000  
+ x[8] = 0x0000000000000000   x[9] = 0x0000000000000004  x[10] = 0x0000000000092220  x[11] = 0x000000000000001d  
+x[12] = 0x0000000100394000  x[13] = 0xffffff0000000000  x[14] = 0x0000000000000000  x[15] = 0x0000000000000000  
+x[16] = 0x0000000300aab400  x[17] = 0x00000001006a40a8  x[18] = 0x0000000000000000  x[19] = 0x000000016fcb1a00  
+x[20] = 0x000000010014fe28  x[21] = 0x0000000100265c80  x[22] = 0x000000016fcb3280  x[23] = 0x0000000182a05000  
+x[24] = 0x00000001de88c3c0  x[25] = 0x0000000000000000  x[26] = 0x0000000000000000  x[27] = 0x0000000000000000  
+x[28] = 0x0000000000000000     fp = 0x000000016fcb19b0     lr = 0x000000010016ca24     sp = 0x000000016fcb1970  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV Image.cpp:19 in prog::Image::height() const
+==56407==ABORTING
 >>>> [59] xpm2_open3 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/tetris.xpm' ...
 Executing command 'save' ...
 PNG.cpp:31:24: runtime error: member call on null pointer of type 'prog::Image'
 SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:31:24 in 
-Image.cpp:15:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:15:14 in 
-PNG.cpp:32:24: runtime error: member call on null pointer of type 'prog::Image'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:32:24 in 
-Image.cpp:11:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:11:14 in 
+Image.cpp:17:14: runtime error: member call on null pointer of type 'const prog::Image *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:17:14 in 
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==56012==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
+==56409==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x00010016ca7c bp 0x00016fcb19b0 sp 0x00016fcb1970 T0)
+==56409==The signal is caused by a UNKNOWN memory access.
+==56409==Hint: address points to the zero page.
+    #0 0x10016ca7c in prog::Image::height() const Image.cpp:19
+    #1 0x1001a2760 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:31
+    #2 0x100170c78 in prog::Script::save() Script.cpp:74
+    #3 0x10016e3d8 in prog::Script::run() Script.cpp:48
+    #4 0x10016ab80 in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
+    #5 0x10015a61c in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
+    #6 0x100151ed8 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
+    #7 0x100150310 in main test.cpp:186
+    #8 0x18298fe4c  (<unknown module>)
 
-==56012==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56012==ABORTING
+==56409==Register values:
+ x[0] = 0x000000016fcb1888   x[1] = 0x0000000000000000   x[2] = 0x0000000000000000   x[3] = 0x0000000101d003c0  
+ x[4] = 0x0000000063000000   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000  
+ x[8] = 0x0000000000000000   x[9] = 0x0000000000000004  x[10] = 0x0000000000092220  x[11] = 0x000000000000001d  
+x[12] = 0x0000000100394000  x[13] = 0xffffff0000000000  x[14] = 0x0000000000000000  x[15] = 0x0000000000000000  
+x[16] = 0x0000000300aab400  x[17] = 0x00000001006a40a8  x[18] = 0x0000000000000000  x[19] = 0x000000016fcb1a00  
+x[20] = 0x000000010014fe28  x[21] = 0x0000000100265c80  x[22] = 0x000000016fcb3280  x[23] = 0x0000000182a05000  
+x[24] = 0x00000001de88c3c0  x[25] = 0x0000000000000000  x[26] = 0x0000000000000000  x[27] = 0x0000000000000000  
+x[28] = 0x0000000000000000     fp = 0x000000016fcb19b0     lr = 0x000000010016ca24     sp = 0x000000016fcb1970  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV Image.cpp:19 in prog::Image::height() const
+==56409==ABORTING
 >>>> [60] xpm2_open4 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/mondrian.xpm' ...
 Executing command 'save' ...
 PNG.cpp:31:24: runtime error: member call on null pointer of type 'prog::Image'
 SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:31:24 in 
-Image.cpp:15:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:15:14 in 
-PNG.cpp:32:24: runtime error: member call on null pointer of type 'prog::Image'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:32:24 in 
-Image.cpp:11:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:11:14 in 
+Image.cpp:17:14: runtime error: member call on null pointer of type 'const prog::Image *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:17:14 in 
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==56014==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
+==56411==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x00010016ca7c bp 0x00016fcb19b0 sp 0x00016fcb1970 T0)
+==56411==The signal is caused by a UNKNOWN memory access.
+==56411==Hint: address points to the zero page.
+    #0 0x10016ca7c in prog::Image::height() const Image.cpp:19
+    #1 0x1001a2760 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:31
+    #2 0x100170c78 in prog::Script::save() Script.cpp:74
+    #3 0x10016e3d8 in prog::Script::run() Script.cpp:48
+    #4 0x10016ab80 in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
+    #5 0x10015a61c in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
+    #6 0x100151ed8 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
+    #7 0x100150310 in main test.cpp:186
+    #8 0x18298fe4c  (<unknown module>)
 
-==56014==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56014==ABORTING
+==56411==Register values:
+ x[0] = 0x000000016fcb1888   x[1] = 0x0000000000000000   x[2] = 0x0000000000000000   x[3] = 0x0000000101d003c0  
+ x[4] = 0x0000000063000000   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000  
+ x[8] = 0x0000000000000000   x[9] = 0x0000000000000004  x[10] = 0x0000000000092220  x[11] = 0x000000000000001d  
+x[12] = 0x0000000100394000  x[13] = 0xffffff0000000000  x[14] = 0x0000000000000000  x[15] = 0x0000000000000000  
+x[16] = 0x0000000300aab400  x[17] = 0x00000001006a40a8  x[18] = 0x0000000000000000  x[19] = 0x000000016fcb1a00  
+x[20] = 0x000000010014fe28  x[21] = 0x0000000100265c80  x[22] = 0x000000016fcb3280  x[23] = 0x0000000182a05000  
+x[24] = 0x00000001de88c3c0  x[25] = 0x0000000000000000  x[26] = 0x0000000000000000  x[27] = 0x0000000000000000  
+x[28] = 0x0000000000000000     fp = 0x000000016fcb19b0     lr = 0x000000010016ca24     sp = 0x000000016fcb1970  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV Image.cpp:19 in prog::Image::height() const
+==56411==ABORTING
 >>>> [61] xpm2_open5 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/lion.xpm' ...
 Executing command 'save' ...
 PNG.cpp:31:24: runtime error: member call on null pointer of type 'prog::Image'
 SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:31:24 in 
-Image.cpp:15:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:15:14 in 
-PNG.cpp:32:24: runtime error: member call on null pointer of type 'prog::Image'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior PNG.cpp:32:24 in 
-Image.cpp:11:14: runtime error: member call on null pointer of type 'const prog::Image *'
-SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:11:14 in 
+Image.cpp:17:14: runtime error: member call on null pointer of type 'const prog::Image *'
+SUMMARY: UndefinedBehaviorSanitizer: undefined-behavior Image.cpp:17:14 in 
+AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==56016==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
+==56413==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x00010016ca7c bp 0x00016fcb19b0 sp 0x00016fcb1970 T0)
+==56413==The signal is caused by a UNKNOWN memory access.
+==56413==Hint: address points to the zero page.
+    #0 0x10016ca7c in prog::Image::height() const Image.cpp:19
+    #1 0x1001a2760 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:31
+    #2 0x100170c78 in prog::Script::save() Script.cpp:74
+    #3 0x10016e3d8 in prog::Script::run() Script.cpp:48
+    #4 0x10016ab80 in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
+    #5 0x10015a61c in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
+    #6 0x100151ed8 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
+    #7 0x100150310 in main test.cpp:186
+    #8 0x18298fe4c  (<unknown module>)
 
-==56016==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56016==ABORTING
+==56413==Register values:
+ x[0] = 0x000000016fcb1888   x[1] = 0x0000000000000000   x[2] = 0x0000000000000000   x[3] = 0x0000000101d003c0  
+ x[4] = 0x0000000063000000   x[5] = 0x0000000000000000   x[6] = 0x0000000000000000   x[7] = 0x0000000000000000  
+ x[8] = 0x0000000000000000   x[9] = 0x0000000000000004  x[10] = 0x0000000000092220  x[11] = 0x000000000000001d  
+x[12] = 0x0000000100394000  x[13] = 0xffffff0000000000  x[14] = 0x0000000000000000  x[15] = 0x0000000000000000  
+x[16] = 0x0000000300aab400  x[17] = 0x00000001006a40a8  x[18] = 0x0000000000000000  x[19] = 0x000000016fcb1a00  
+x[20] = 0x000000010014fe28  x[21] = 0x0000000100265c80  x[22] = 0x000000016fcb3280  x[23] = 0x0000000182a05000  
+x[24] = 0x00000001de88c3c0  x[25] = 0x0000000000000000  x[26] = 0x0000000000000000  x[27] = 0x0000000000000000  
+x[28] = 0x0000000000000000     fp = 0x000000016fcb19b0     lr = 0x000000010016ca24     sp = 0x000000016fcb1970  
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV Image.cpp:19 in prog::Image::height() const
+==56413==ABORTING
 >>>> [62] xpm2_save1 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...
@@ -1725,23 +943,7 @@ Executing command 'blank' ...
 Executing command 'xpm2_open' ...
 Executing command 'output/xpm2_save1.xpm' ...
 Executing command 'save' ...
-=================================================================
-==56018==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56018==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56018==ABORTING
+Images have different dimensions: 16x7 != 1x1
 >>>> [63] xpm2_save2 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...
@@ -1750,23 +952,7 @@ Executing command 'blank' ...
 Executing command 'xpm2_open' ...
 Executing command 'output/xpm2_save2.xpm' ...
 Executing command 'save' ...
-=================================================================
-==56020==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56020==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56020==ABORTING
+Images have different dimensions: 150x150 != 1x1
 >>>> [64] xpm2_save3 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...
@@ -1775,23 +961,7 @@ Executing command 'blank' ...
 Executing command 'xpm2_open' ...
 Executing command 'output/xpm2_save3.xpm' ...
 Executing command 'save' ...
-=================================================================
-==56022==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56022==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56022==ABORTING
+Images have different dimensions: 300x300 != 1x1
 >>>> [65] xpm2_save4 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...
@@ -1800,23 +970,7 @@ Executing command 'blank' ...
 Executing command 'xpm2_open' ...
 Executing command 'output/xpm2_save4.xpm' ...
 Executing command 'save' ...
-=================================================================
-==56024==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56024==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56024==ABORTING
+Images have different dimensions: 270x480 != 1x1
 >>>> [66] xpm2_save5 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...
@@ -1825,20 +979,4 @@ Executing command 'blank' ...
 Executing command 'xpm2_open' ...
 Executing command 'output/xpm2_save5.xpm' ...
 Executing command 'save' ...
-=================================================================
-==56026==ERROR: AddressSanitizer: requested allocation size 0xfffffffffffffffd (0x800 after adjustments for alignment, red zones etc.) exceeds maximum supported size of 0x10000000000 (thread T0)
-    #0 0x1052d2ca8 in wrap_malloc+0x94 (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8)
-    #1 0x104e0cba8 in stbi_write_png_to_mem stb_image_write.h:1145
-    #2 0x104e15b44 in stbi_write_png stb_image_write.h:1219
-    #3 0x104e1ef28 in prog::saveToPNG(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, prog::Image const*) PNG.cpp:44
-    #4 0x104deccdc in prog::Script::save() Script.cpp:74
-    #5 0x104dea450 in prog::Script::run() Script.cpp:48
-    #6 0x104de6e5c in prog::TestDriver::test_script(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:43
-    #7 0x104dd68f8 in prog::TestDriver::run_test(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:79
-    #8 0x104dce1b4 in prog::TestDriver::test_scripts(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&) test.cpp:165
-    #9 0x104dcc5ec in main test.cpp:186
-    #10 0x18298fe4c  (<unknown module>)
-
-==56026==HINT: if you don't care about these errors you may set allocator_may_return_null=1
-SUMMARY: AddressSanitizer: allocation-size-too-big (libclang_rt.asan_osx_dynamic.dylib:arm64e+0x3eca8) in wrap_malloc+0x94
-==56026==ABORTING
+Images have different dimensions: 250x380 != 1x1
