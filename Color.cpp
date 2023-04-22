@@ -13,7 +13,9 @@ namespace prog {
 
     }
     Color::Color(rgb_value red, rgb_value green, rgb_value blue) {
-
+        this->red_ = red;
+        this->green_ = green;
+        this->blue_ = blue;
     }
     rgb_value Color::red() const {
         return this->red_;
