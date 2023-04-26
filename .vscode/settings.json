@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.s": "platformio-debug.asm",
+        "iosfwd": "cpp"
+    }
+}

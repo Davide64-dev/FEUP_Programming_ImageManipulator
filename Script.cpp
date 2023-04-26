@@ -49,6 +49,11 @@ namespace prog {
                 save();
                 continue;
             } 
+
+            if (command == "fill"){
+                fill();
+                continue;
+            }
             // TODO ...
 
         }
@@ -60,9 +65,22 @@ namespace prog {
         input >> filename;
         image = loadFromPNG(filename);
     }
+
+    void Script::fill(){
+        int x, y, width, height;
+        Color color;
+        input >> x >> y >> width >> height >> color;
+        for (int i = x; i < height;i++){
+            for(int j = y; j < width;j++){
+                image->at(i, j) = color;
+            }
+        }
+    }
+
+
     void Script::blank() {
         // Replace current image (if any) with blank image.
-        cout << "Chamout blank" << endl;
+        cout << "chamou o blank";
         clear_image_if_any();
         int w, h;
         Color fill;

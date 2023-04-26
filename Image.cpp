@@ -7,20 +7,11 @@ namespace prog
     Color temp = fill;
     this->width_ = w;
     this->height_ = h;
-    cout << width_;
     for (int i = 0; i < h;i++){
       for (int j = 0; j < w;j++){
         this->_image[i].push_back(temp);
       }
     }
-    for (int i = 0; i < height_;i++){
-      for (int j = 0; j < width_;j++){
-        cout << i << " " << j;
-      }
-      cout << '\n';
-    }
-
-
 
   }
   Image::~Image()
@@ -40,11 +31,11 @@ namespace prog
 
   Color& Image::at(int x, int y)
   {
-    return DUMMY_color;
+    return this->_image[y][x];
   }
 
   const Color& Image::at(int x, int y) const
   {
-    return DUMMY_color;
+    return this->_image[y][x];
   }
 }
