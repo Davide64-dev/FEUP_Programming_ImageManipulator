@@ -4,8 +4,15 @@ namespace prog
 {
   Image::Image(int w, int h, const Color &fill)
   {
+    Color temp = fill;
     this->width_ = w;
     this->height_ = h;
+    for (int i = 0; i < height_;i++){
+      for (int j = 0; j < w;j++){
+        this->_image[i].push_back(temp);
+      }
+    }
+
   }
   Image::~Image()
   {
