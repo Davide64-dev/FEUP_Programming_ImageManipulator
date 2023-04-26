@@ -41,6 +41,7 @@ namespace prog {
             }
             if (command == "blank") {
                 blank();
+
                 continue;
             }
             // Other commands require an image to be previously loaded.
@@ -61,10 +62,12 @@ namespace prog {
     }
     void Script::blank() {
         // Replace current image (if any) with blank image.
+        cout << "Chamout blank" << endl;
         clear_image_if_any();
         int w, h;
         Color fill;
         input >> w >> h >> fill;
+        cout <<" "<< w<<" " <<" "<< h<<" " << fill.red() << fill.green() << " " << fill.blue();
         image = new Image(w, h, fill);
     }
     void Script::save() {
