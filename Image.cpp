@@ -2,8 +2,8 @@
 #include <iostream>
 namespace prog
 {
+  //create image with width w, height h, and all pixels set to color fill
   Image::Image(int w, int h, const Color &fill){
-    //create image with width w, height h, and all pixels set to color fill
     Color temp = fill;
     this->width_ = w;
     this->height_ = h;
@@ -15,8 +15,8 @@ namespace prog
     }
   }
 
+  //destructor. Only use it if you use dynamically allocated memory explicitly.
   Image::~Image(){
-    //destructor. Only use it if you use dynamically allocated memory explicitly.
   }
 
   //get image width and height
@@ -27,14 +27,14 @@ namespace prog
     return this->height_;
   }
 
+  //get mutable reference to the value of pixel (x,y)
+  //width x, height y
   Color& Image::at(int x, int y){
-    //get mutable reference to the value of pixel (x,y)
-    //width x, height y
     return this->_image[y][x];
   }
-
+  
+  //get read-only reference to the value of pixel (x,y)
   const Color& Image::at(int x, int y) const{
-    //get read-only reference to the value of pixel (x,y)
     return this->_image[y][x];
   }
 }
