@@ -80,18 +80,16 @@ namespace prog {
         saveToPNG(filename, image);
     }
     void Script::invert() {
-        /*
-        int width = Image->width();
-        int height = Image->height();
-        for (int i = 0; i < height; i++){
-            for (int j = 0; j < width; j++){
-                Color& pixel = Image->at(j,i);
-                pixel.red() = 255 - pixel.red();
-                pixel.green() = 255 - pixel.green();
-                pixel.blue() = 255 - pixel.blue();
+        //invert Color of image
+        for (int y = 0; y < image->height(); y++){
+            for (int x = 0; x < image->width(); x++){
+                Color& pixel = image->at(x,y);
+                    pixel.red() = 255 - pixel.red();
+                    pixel.green() = 255 - pixel.green();
+                    pixel.blue() = 255 - pixel.blue();
             }
         }
-        */
-
     }
+
+    
 }
