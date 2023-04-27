@@ -70,6 +70,16 @@ namespace prog {
                 replace();
                 continue;
             }
+
+            if (command == "h_mirror") {
+                h_mirror();
+                continue;
+            }
+
+            if (command == "v_mirror") {
+                v_mirror();
+                continue;
+            }
         }
     }
     
@@ -145,4 +155,29 @@ namespace prog {
         }
     }
 
+    void Script::h_mirror() {
+        //horizontal mirror
+        int h = image->height();
+        int w = image->width();
+        for (int y = 0; y < h; y++){
+            for (int x = 0; x < w / 2; x++){
+                Color temp = image->at(x,y);
+                image->at(x,y) = image->at(w-1-x,y);
+                image->at(w-1-x,y) = temp;
+            }
+        }
+    }
+
+    void Script::v_mirror() {
+        //vertical mirror
+        int h = image->height();
+        int w = image->width();
+        for (int y = 0; y < h / 2; y++){
+            for (int x = 0; x < w; x++){
+                Color temp = image->at(x,y);
+                image->at(x,y) = image->at(x,h-1-y);
+                image->at(x,h-1-y) = temp;
+            }
+        }
+    }
 }
