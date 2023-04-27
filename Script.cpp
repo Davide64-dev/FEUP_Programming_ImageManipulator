@@ -56,6 +56,11 @@ namespace prog {
                 continue;
             }
 
+            if (command == "fill") {
+                fill();
+                continue;
+            }
+            
         }
     }
     void Script::open() {
@@ -90,6 +95,16 @@ namespace prog {
             }
         }
     }
+    void Script::fill() {
+        int x, y, w, h, r, g, b;
+        input >> x >> y >> w >> h >> r >> g >> b;
+        Color _fill(r,g,b);
 
-    
+        for (int i = y; i < y + h; i++){
+            for (int j = x; j < x + w; j++){
+                image->at(j,i) = _fill;
+            }
+        }
+    }
+
 }

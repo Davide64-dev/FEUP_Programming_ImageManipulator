@@ -25,6 +25,7 @@ namespace prog
     void blank();
     void save();
     void invert();
+    void fill();
   };
 }
 #endif
