@@ -60,7 +60,11 @@ namespace prog {
                 fill();
                 continue;
             }
-            
+
+            if (command == "to_gray_scale") {
+                to_gray_scale();
+                continue;
+            }
         }
     }
     void Script::open() {
@@ -103,6 +107,17 @@ namespace prog {
         for (int i = y; i < y + h; i++){
             for (int j = x; j < x + w; j++){
                 image->at(j,i) = _fill;
+            }
+        }
+    }
+
+    void Script::to_gray_scale() {
+        for (int y = 0; y < image->height(); y++){
+            for (int x = 0; x < image->width(); x++){
+                Color& pixel = image->at(x,y);
+                int v = (pixel.red()+pixel.green()+pixel.blue())/3;
+                Color gray_tone(v,v,v);
+                image->at(x,y) = gray_tone;
             }
         }
     }

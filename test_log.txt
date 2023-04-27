@@ -586,27 +586,19 @@ Images differ at pixel (0, 0)
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-Images differ at pixel (150, 25)
-170 170 170 vs 255 255 0
 >>>> [50] to_gray_scale2 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-Images differ at pixel (150, 25)
-170 170 170 vs 255 255 0
 >>>> [51] to_gray_scale3 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-Images differ at pixel (135, 60)
-201 201 201 vs 255 175 175
 >>>> [52] to_gray_scale4 <<<<
 Executing command 'open' ...
 Executing command 'to_gray_scale' ...
 Executing command 'save' ...
-Images differ at pixel (0, 0)
-66 66 66 vs 38 48 114
 >>>> [53] v_mirror1 <<<<
 Executing command 'open' ...
 Executing command 'v_mirror' ...
@@ -638,24 +630,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:23:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==9356==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x558d6ec1555b bp 0x7fff5a200030 sp 0x7fff5a200020 T0)
-==9356==The signal is caused by a READ memory access.
-==9356==Hint: address points to the zero page.
-    #0 0x558d6ec1555b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
-    #1 0x558d6ec6119a in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
-    #2 0x558d6ec1ccfc in prog::Script::save() /home/chill/Prog/Script.cpp:85
-    #3 0x558d6ec1ba89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
-    #4 0x558d6ec0727b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7f27b)
-    #5 0x558d6ec0807d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8007d)
-    #6 0x558d6ec09ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x81ef3)
-    #7 0x558d6ec06340 in main /home/chill/Prog/test.cpp:186
-    #8 0x7f8ac9829d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f8ac9829e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x558d6ec05ed4 in _start (/home/chill/Prog/test+0x7ded4)
+==10713==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x559693d1d55b bp 0x7ffd32d1d560 sp 0x7ffd32d1d550 T0)
+==10713==The signal is caused by a READ memory access.
+==10713==Hint: address points to the zero page.
+    #0 0x559693d1d55b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
+    #1 0x559693d69915 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
+    #2 0x559693d24d58 in prog::Script::save() /home/chill/Prog/Script.cpp:89
+    #3 0x559693d23a89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
+    #4 0x559693d0f27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8027b)
+    #5 0x559693d1007d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8107d)
+    #6 0x559693d11ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x82ef3)
+    #7 0x559693d0e340 in main /home/chill/Prog/test.cpp:186
+    #8 0x7f1299029d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f1299029e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x559693d0ded4 in _start (/home/chill/Prog/test+0x7eed4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/chill/Prog/Image.cpp:23 in prog::Image::height() const
-==9356==ABORTING
+==10713==ABORTING
 >>>> [58] xpm2_open2 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/squares.xpm' ...
@@ -664,24 +656,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:23:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==9357==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x558d6ec1555b bp 0x7fff5a200030 sp 0x7fff5a200020 T0)
-==9357==The signal is caused by a READ memory access.
-==9357==Hint: address points to the zero page.
-    #0 0x558d6ec1555b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
-    #1 0x558d6ec6119a in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
-    #2 0x558d6ec1ccfc in prog::Script::save() /home/chill/Prog/Script.cpp:85
-    #3 0x558d6ec1ba89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
-    #4 0x558d6ec0727b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7f27b)
-    #5 0x558d6ec0807d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8007d)
-    #6 0x558d6ec09ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x81ef3)
-    #7 0x558d6ec06340 in main /home/chill/Prog/test.cpp:186
-    #8 0x7f8ac9829d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f8ac9829e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x558d6ec05ed4 in _start (/home/chill/Prog/test+0x7ded4)
+==10714==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x559693d1d55b bp 0x7ffd32d1d560 sp 0x7ffd32d1d550 T0)
+==10714==The signal is caused by a READ memory access.
+==10714==Hint: address points to the zero page.
+    #0 0x559693d1d55b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
+    #1 0x559693d69915 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
+    #2 0x559693d24d58 in prog::Script::save() /home/chill/Prog/Script.cpp:89
+    #3 0x559693d23a89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
+    #4 0x559693d0f27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8027b)
+    #5 0x559693d1007d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8107d)
+    #6 0x559693d11ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x82ef3)
+    #7 0x559693d0e340 in main /home/chill/Prog/test.cpp:186
+    #8 0x7f1299029d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f1299029e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x559693d0ded4 in _start (/home/chill/Prog/test+0x7eed4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/chill/Prog/Image.cpp:23 in prog::Image::height() const
-==9357==ABORTING
+==10714==ABORTING
 >>>> [59] xpm2_open3 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/tetris.xpm' ...
@@ -690,24 +682,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:23:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==9369==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x558d6ec1555b bp 0x7fff5a200030 sp 0x7fff5a200020 T0)
-==9369==The signal is caused by a READ memory access.
-==9369==Hint: address points to the zero page.
-    #0 0x558d6ec1555b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
-    #1 0x558d6ec6119a in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
-    #2 0x558d6ec1ccfc in prog::Script::save() /home/chill/Prog/Script.cpp:85
-    #3 0x558d6ec1ba89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
-    #4 0x558d6ec0727b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7f27b)
-    #5 0x558d6ec0807d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8007d)
-    #6 0x558d6ec09ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x81ef3)
-    #7 0x558d6ec06340 in main /home/chill/Prog/test.cpp:186
-    #8 0x7f8ac9829d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f8ac9829e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x558d6ec05ed4 in _start (/home/chill/Prog/test+0x7ded4)
+==10715==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x559693d1d55b bp 0x7ffd32d1d560 sp 0x7ffd32d1d550 T0)
+==10715==The signal is caused by a READ memory access.
+==10715==Hint: address points to the zero page.
+    #0 0x559693d1d55b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
+    #1 0x559693d69915 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
+    #2 0x559693d24d58 in prog::Script::save() /home/chill/Prog/Script.cpp:89
+    #3 0x559693d23a89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
+    #4 0x559693d0f27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8027b)
+    #5 0x559693d1007d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8107d)
+    #6 0x559693d11ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x82ef3)
+    #7 0x559693d0e340 in main /home/chill/Prog/test.cpp:186
+    #8 0x7f1299029d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f1299029e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x559693d0ded4 in _start (/home/chill/Prog/test+0x7eed4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/chill/Prog/Image.cpp:23 in prog::Image::height() const
-==9369==ABORTING
+==10715==ABORTING
 >>>> [60] xpm2_open4 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/mondrian.xpm' ...
@@ -716,24 +708,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:23:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==9370==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x558d6ec1555b bp 0x7fff5a200030 sp 0x7fff5a200020 T0)
-==9370==The signal is caused by a READ memory access.
-==9370==Hint: address points to the zero page.
-    #0 0x558d6ec1555b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
-    #1 0x558d6ec6119a in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
-    #2 0x558d6ec1ccfc in prog::Script::save() /home/chill/Prog/Script.cpp:85
-    #3 0x558d6ec1ba89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
-    #4 0x558d6ec0727b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7f27b)
-    #5 0x558d6ec0807d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8007d)
-    #6 0x558d6ec09ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x81ef3)
-    #7 0x558d6ec06340 in main /home/chill/Prog/test.cpp:186
-    #8 0x7f8ac9829d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f8ac9829e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x558d6ec05ed4 in _start (/home/chill/Prog/test+0x7ded4)
+==10716==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x559693d1d55b bp 0x7ffd32d1d560 sp 0x7ffd32d1d550 T0)
+==10716==The signal is caused by a READ memory access.
+==10716==Hint: address points to the zero page.
+    #0 0x559693d1d55b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
+    #1 0x559693d69915 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
+    #2 0x559693d24d58 in prog::Script::save() /home/chill/Prog/Script.cpp:89
+    #3 0x559693d23a89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
+    #4 0x559693d0f27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8027b)
+    #5 0x559693d1007d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8107d)
+    #6 0x559693d11ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x82ef3)
+    #7 0x559693d0e340 in main /home/chill/Prog/test.cpp:186
+    #8 0x7f1299029d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f1299029e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x559693d0ded4 in _start (/home/chill/Prog/test+0x7eed4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/chill/Prog/Image.cpp:23 in prog::Image::height() const
-==9370==ABORTING
+==10716==ABORTING
 >>>> [61] xpm2_open5 <<<<
 Executing command 'xpm2_open' ...
 Executing command 'input/lion.xpm' ...
@@ -742,24 +734,24 @@ PNG.cpp:31:30: runtime error: member call on null pointer of type 'const struct 
 Image.cpp:23:18: runtime error: member access within null pointer of type 'const struct Image'
 AddressSanitizer:DEADLYSIGNAL
 =================================================================
-==9371==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x558d6ec1555b bp 0x7fff5a200030 sp 0x7fff5a200020 T0)
-==9371==The signal is caused by a READ memory access.
-==9371==Hint: address points to the zero page.
-    #0 0x558d6ec1555b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
-    #1 0x558d6ec6119a in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
-    #2 0x558d6ec1ccfc in prog::Script::save() /home/chill/Prog/Script.cpp:85
-    #3 0x558d6ec1ba89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
-    #4 0x558d6ec0727b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7f27b)
-    #5 0x558d6ec0807d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8007d)
-    #6 0x558d6ec09ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x81ef3)
-    #7 0x558d6ec06340 in main /home/chill/Prog/test.cpp:186
-    #8 0x7f8ac9829d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7f8ac9829e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x558d6ec05ed4 in _start (/home/chill/Prog/test+0x7ded4)
+==10717==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000004 (pc 0x559693d1d55b bp 0x7ffd32d1d560 sp 0x7ffd32d1d550 T0)
+==10717==The signal is caused by a READ memory access.
+==10717==Hint: address points to the zero page.
+    #0 0x559693d1d55b in prog::Image::height() const /home/chill/Prog/Image.cpp:23
+    #1 0x559693d69915 in prog::saveToPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, prog::Image const*) /home/chill/Prog/PNG.cpp:31
+    #2 0x559693d24d58 in prog::Script::save() /home/chill/Prog/Script.cpp:89
+    #3 0x559693d23a89 in prog::Script::run() /home/chill/Prog/Script.cpp:49
+    #4 0x559693d0f27b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8027b)
+    #5 0x559693d1007d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x8107d)
+    #6 0x559693d11ef3 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x82ef3)
+    #7 0x559693d0e340 in main /home/chill/Prog/test.cpp:186
+    #8 0x7f1299029d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
+    #9 0x7f1299029e3f in __libc_start_main_impl ../csu/libc-start.c:392
+    #10 0x559693d0ded4 in _start (/home/chill/Prog/test+0x7eed4)
 
 AddressSanitizer can not provide additional info.
 SUMMARY: AddressSanitizer: SEGV /home/chill/Prog/Image.cpp:23 in prog::Image::height() const
-==9371==ABORTING
+==10717==ABORTING
 >>>> [62] xpm2_save1 <<<<
 Executing command 'open' ...
 Executing command 'xpm2_save' ...

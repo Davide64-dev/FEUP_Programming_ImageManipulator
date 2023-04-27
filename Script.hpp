@@ -26,6 +26,7 @@ namespace prog
     void save();
     void invert();
     void fill();
+    void to_gray_scale();
   };
 }
 #endif
