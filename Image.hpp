@@ -12,8 +12,9 @@ namespace prog
     int width_;
     int height_;
     vector<vector<Color>> _image;
+    
   public:
-    Image(int w, int h, const Color &fill = Color(255,255,255)); //default color is white
+    Image(int w, int h, const Color &fill = {255, 255, 255});
     ~Image();
     int width() const;
     int height() const;

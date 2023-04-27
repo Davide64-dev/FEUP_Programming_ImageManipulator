@@ -1,127 +1,17 @@
 >>>> [1] basic_blank1 <<<<
 Executing command 'blank' ...
-/usr/include/c++/11/bits/stl_vector.h:1046:34: runtime error: reference binding to null pointer of type 'struct value_type'
-Image.cpp:13:34: runtime error: member call on null pointer of type 'struct value_type'
-/usr/include/c++/11/bits/stl_vector.h:1189:20: runtime error: member access within null pointer of type 'struct vector'
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==10871==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x555f1a1bbe60 bp 0x7fff6246ad20 sp 0x7fff6246ad00 T0)
-==10871==The signal is caused by a READ memory access.
-==10871==Hint: address points to the zero page.
-    #0 0x555f1a1bbe60 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&) /usr/include/c++/11/bits/stl_vector.h:1189
-    #1 0x555f1a1bb0ec in prog::Image::Image(int, int, prog::Color const&) /home/chill/Prog/Image.cpp:13
-    #2 0x555f1a1c1c10 in prog::Script::blank() /home/chill/Prog/Script.cpp:94
-    #3 0x555f1a1bff13 in prog::Script::run() /home/chill/Prog/Script.cpp:46
-    #4 0x555f1a1ad29b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7c29b)
-    #5 0x555f1a1ae09d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7d09d)
-    #6 0x555f1a1aff13 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7ef13)
-    #7 0x555f1a1ac360 in main /home/chill/Prog/test.cpp:186
-    #8 0x7fdd1e229d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7fdd1e229e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x555f1a1abef4 in _start (/home/chill/Prog/test+0x7aef4)
-
-AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /usr/include/c++/11/bits/stl_vector.h:1189 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&)
-==10871==ABORTING
+Executing command 'save' ...
 >>>> [2] basic_blank2 <<<<
 Executing command 'blank' ...
-/usr/include/c++/11/bits/stl_vector.h:1046:34: runtime error: reference binding to null pointer of type 'struct value_type'
-Image.cpp:13:34: runtime error: member call on null pointer of type 'struct value_type'
-/usr/include/c++/11/bits/stl_vector.h:1189:20: runtime error: member access within null pointer of type 'struct vector'
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==10873==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x555f1a1bbe60 bp 0x7fff6246ad20 sp 0x7fff6246ad00 T0)
-==10873==The signal is caused by a READ memory access.
-==10873==Hint: address points to the zero page.
-    #0 0x555f1a1bbe60 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&) /usr/include/c++/11/bits/stl_vector.h:1189
-    #1 0x555f1a1bb0ec in prog::Image::Image(int, int, prog::Color const&) /home/chill/Prog/Image.cpp:13
-    #2 0x555f1a1c1c10 in prog::Script::blank() /home/chill/Prog/Script.cpp:94
-    #3 0x555f1a1bff13 in prog::Script::run() /home/chill/Prog/Script.cpp:46
-    #4 0x555f1a1ad29b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7c29b)
-    #5 0x555f1a1ae09d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7d09d)
-    #6 0x555f1a1aff13 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7ef13)
-    #7 0x555f1a1ac360 in main /home/chill/Prog/test.cpp:186
-    #8 0x7fdd1e229d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7fdd1e229e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x555f1a1abef4 in _start (/home/chill/Prog/test+0x7aef4)
-
-AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /usr/include/c++/11/bits/stl_vector.h:1189 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&)
-==10873==ABORTING
+Executing command 'save' ...
 >>>> [3] basic_blank3 <<<<
 Executing command 'blank' ...
-/usr/include/c++/11/bits/stl_vector.h:1046:34: runtime error: reference binding to null pointer of type 'struct value_type'
-Image.cpp:13:34: runtime error: member call on null pointer of type 'struct value_type'
-/usr/include/c++/11/bits/stl_vector.h:1189:20: runtime error: member access within null pointer of type 'struct vector'
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==10876==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x555f1a1bbe60 bp 0x7fff6246ad20 sp 0x7fff6246ad00 T0)
-==10876==The signal is caused by a READ memory access.
-==10876==Hint: address points to the zero page.
-    #0 0x555f1a1bbe60 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&) /usr/include/c++/11/bits/stl_vector.h:1189
-    #1 0x555f1a1bb0ec in prog::Image::Image(int, int, prog::Color const&) /home/chill/Prog/Image.cpp:13
-    #2 0x555f1a1c1c10 in prog::Script::blank() /home/chill/Prog/Script.cpp:94
-    #3 0x555f1a1bff13 in prog::Script::run() /home/chill/Prog/Script.cpp:46
-    #4 0x555f1a1ad29b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7c29b)
-    #5 0x555f1a1ae09d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7d09d)
-    #6 0x555f1a1aff13 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7ef13)
-    #7 0x555f1a1ac360 in main /home/chill/Prog/test.cpp:186
-    #8 0x7fdd1e229d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #9 0x7fdd1e229e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #10 0x555f1a1abef4 in _start (/home/chill/Prog/test+0x7aef4)
-
-AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /usr/include/c++/11/bits/stl_vector.h:1189 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&)
-==10876==ABORTING
+Executing command 'blank' ...
+Executing command 'save' ...
 >>>> [4] basic_open1 <<<<
 Executing command 'open' ...
-/usr/include/c++/11/bits/stl_vector.h:1046:34: runtime error: reference binding to null pointer of type 'struct value_type'
-Image.cpp:13:34: runtime error: member call on null pointer of type 'struct value_type'
-/usr/include/c++/11/bits/stl_vector.h:1189:20: runtime error: member access within null pointer of type 'struct vector'
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==10877==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x555f1a1bbe60 bp 0x7fff6246ac00 sp 0x7fff6246abe0 T0)
-==10877==The signal is caused by a READ memory access.
-==10877==Hint: address points to the zero page.
-    #0 0x555f1a1bbe60 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&) /usr/include/c++/11/bits/stl_vector.h:1189
-    #1 0x555f1a1bb0ec in prog::Image::Image(int, int, prog::Color const&) /home/chill/Prog/Image.cpp:13
-    #2 0x555f1a204b18 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/chill/Prog/PNG.cpp:20
-    #3 0x555f1a1c09c0 in prog::Script::open() /home/chill/Prog/Script.cpp:70
-    #4 0x555f1a1bfeb7 in prog::Script::run() /home/chill/Prog/Script.cpp:42
-    #5 0x555f1a1ad29b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7c29b)
-    #6 0x555f1a1ae09d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7d09d)
-    #7 0x555f1a1aff13 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7ef13)
-    #8 0x555f1a1ac360 in main /home/chill/Prog/test.cpp:186
-    #9 0x7fdd1e229d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #10 0x7fdd1e229e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #11 0x555f1a1abef4 in _start (/home/chill/Prog/test+0x7aef4)
-
-AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /usr/include/c++/11/bits/stl_vector.h:1189 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&)
-==10877==ABORTING
+Executing command 'save' ...
 >>>> [5] basic_open2 <<<<
 Executing command 'open' ...
-/usr/include/c++/11/bits/stl_vector.h:1046:34: runtime error: reference binding to null pointer of type 'struct value_type'
-Image.cpp:13:34: runtime error: member call on null pointer of type 'struct value_type'
-/usr/include/c++/11/bits/stl_vector.h:1189:20: runtime error: member access within null pointer of type 'struct vector'
-AddressSanitizer:DEADLYSIGNAL
-=================================================================
-==10878==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000008 (pc 0x555f1a1bbe60 bp 0x7fff6246ac00 sp 0x7fff6246abe0 T0)
-==10878==The signal is caused by a READ memory access.
-==10878==Hint: address points to the zero page.
-    #0 0x555f1a1bbe60 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&) /usr/include/c++/11/bits/stl_vector.h:1189
-    #1 0x555f1a1bb0ec in prog::Image::Image(int, int, prog::Color const&) /home/chill/Prog/Image.cpp:13
-    #2 0x555f1a204b18 in prog::loadFromPNG(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) /home/chill/Prog/PNG.cpp:20
-    #3 0x555f1a1c09c0 in prog::Script::open() /home/chill/Prog/Script.cpp:70
-    #4 0x555f1a1bfeb7 in prog::Script::run() /home/chill/Prog/Script.cpp:42
-    #5 0x555f1a1ad29b in prog::TestDriver::test_script(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7c29b)
-    #6 0x555f1a1ae09d in prog::TestDriver::run_test(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7d09d)
-    #7 0x555f1a1aff13 in prog::TestDriver::test_scripts(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (/home/chill/Prog/test+0x7ef13)
-    #8 0x555f1a1ac360 in main /home/chill/Prog/test.cpp:186
-    #9 0x7fdd1e229d8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
-    #10 0x7fdd1e229e3f in __libc_start_main_impl ../csu/libc-start.c:392
-    #11 0x555f1a1abef4 in _start (/home/chill/Prog/test+0x7aef4)
-
-AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /usr/include/c++/11/bits/stl_vector.h:1189 in std::vector<prog::Color, std::allocator<prog::Color> >::push_back(prog::Color const&)
-==10878==ABORTING
+Executing command 'open' ...
+Executing command 'save' ...

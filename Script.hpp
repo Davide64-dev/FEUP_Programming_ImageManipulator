@@ -23,7 +23,6 @@ namespace prog
     void clear_image_if_any();
     void open();
     void blank();
-    void fill();
     void save();
   };
 }

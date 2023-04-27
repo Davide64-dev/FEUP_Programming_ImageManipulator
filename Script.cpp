@@ -21,20 +21,17 @@ namespace prog {
             image(nullptr), input(filename) {
 
     }
-    
     void Script::clear_image_if_any() {
         if (image != nullptr) {
             delete image;
             image = nullptr;
         }
     }
-    
     Script::~Script() {
         clear_image_if_any();
     }
 
     void Script::run() {
-
         string command;
         while (input >> command) {
             cout << "Executing command '" << command << "' ..." << endl;
@@ -44,7 +41,6 @@ namespace prog {
             }
             if (command == "blank") {
                 blank();
-
                 continue;
             }
             // Other commands require an image to be previously loaded.
@@ -52,16 +48,10 @@ namespace prog {
                 save();
                 continue;
             } 
-
-            if (command == "fill"){
-                fill();
-                continue;
-            }
             // TODO ...
 
         }
     }
-    
     void Script::open() {
         // Replace current image (if any) with image read from PNG file.
         clear_image_if_any();
@@ -69,31 +59,14 @@ namespace prog {
         input >> filename;
         image = loadFromPNG(filename);
     }
-
-    void Script::fill(){
-        int x, y, width, height;
-        Color color;
-        input >> x >> y >> width >> height >> color;
-        for (int i = x; i < height;i++){
-            for(int j = y; j < width;j++){
-                image->at(i, j) = color;
-            }
-        }
-    }
-
     void Script::blank() {
         // Replace current image (if any) with blank image.
-        cout << "chamou o blank";
         clear_image_if_any();
         int w, h;
         Color fill;
         input >> w >> h >> fill;
-
-        cout <<" "<< w<<" " <<" "<< h<<" " << fill.red() << fill.green() << " " << fill.blue();
-        
         image = new Image(w, h, fill);
     }
-    
     void Script::save() {
         // Save current image to PNG file.
         string filename;
@@ -101,5 +74,3 @@ namespace prog {
         saveToPNG(filename, image);
     }
 }
-
-

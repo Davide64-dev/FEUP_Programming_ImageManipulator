@@ -29,20 +29,20 @@ namespace prog
 
   //get image width and height
   int Image::width() const{
-    return this->width_;
+    return width_;
   }
   int Image::height() const{
-    return this->height_;
+    return height_;
   }
 
   //get mutable reference to the value of pixel (x,y)
   //width x, height y
   Color& Image::at(int x, int y){
-    return this->_image[y][x];
+    return _image[y][x];
   }
 
   //get read-only reference to the value of pixel (x,y)
   const Color& Image::at(int x, int y) const{
-    return this->_image[y][x];
+    return _image[y][x];
   }
 }
