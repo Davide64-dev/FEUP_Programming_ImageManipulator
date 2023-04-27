@@ -1,9 +1,11 @@
 #include "Image.hpp"
-#include <iostream>
+
 namespace prog
 {
-  //create image with width w, height h, and all pixels set to color fill
   Image::Image(int w, int h, const Color &fill){
+    //create image with width w, height h, and all pixels set to color fill
+
+    /*
     Color temp = fill;
     this->width_ = w;
     this->height_ = h;
@@ -12,11 +14,17 @@ namespace prog
       for (int j = 0; j < w;j++){
         this->_image[i].push_back(temp);
       }
-    }
+    }*/
+
+    this->width_ = w;
+    this->height_ = h;
+
+    //it creates a matrix vector with the h and w dimensions and fill it with "fill" color
+    this->_image = vector<vector<Color>>(height_, vector<Color>(width_, fill));
   }
 
-  //destructor. Only use it if you use dynamically allocated memory explicitly.
   Image::~Image(){
+    //destructor. Only use it if you use dynamically allocated memory explicitly.
   }
 
   //get image width and height
@@ -32,7 +40,7 @@ namespace prog
   Color& Image::at(int x, int y){
     return this->_image[y][x];
   }
-  
+
   //get read-only reference to the value of pixel (x,y)
   const Color& Image::at(int x, int y) const{
     return this->_image[y][x];
