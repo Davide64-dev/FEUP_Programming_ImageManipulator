@@ -7,15 +7,17 @@ namespace prog
     Color temp = fill;
     this->width_ = w;
     this->height_ = h;
+
     for (int i = 0; i < h;i++){
       for (int j = 0; j < w;j++){
         this->_image[i].push_back(temp);
       }
     }
-
   }
+
   Image::~Image()
   {
+
   }
   int Image::width() const
   {
@@ -25,9 +27,6 @@ namespace prog
   {
     return this->height_;
   }
-
-  // TODO: remove this DUMMY_color variable once you have appropriate fields for representing image pixels.
-  Color DUMMY_color;
 
   Color& Image::at(int x, int y)
   {

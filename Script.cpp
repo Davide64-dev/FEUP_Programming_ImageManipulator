@@ -21,17 +21,20 @@ namespace prog {
             image(nullptr), input(filename) {
 
     }
+    
     void Script::clear_image_if_any() {
         if (image != nullptr) {
             delete image;
             image = nullptr;
         }
     }
+    
     Script::~Script() {
         clear_image_if_any();
     }
 
     void Script::run() {
+
         string command;
         while (input >> command) {
             cout << "Executing command '" << command << "' ..." << endl;
@@ -58,6 +61,7 @@ namespace prog {
 
         }
     }
+    
     void Script::open() {
         // Replace current image (if any) with image read from PNG file.
         clear_image_if_any();
@@ -77,7 +81,6 @@ namespace prog {
         }
     }
 
-
     void Script::blank() {
         // Replace current image (if any) with blank image.
         cout << "chamou o blank";
@@ -85,9 +88,12 @@ namespace prog {
         int w, h;
         Color fill;
         input >> w >> h >> fill;
+
         cout <<" "<< w<<" " <<" "<< h<<" " << fill.red() << fill.green() << " " << fill.blue();
+        
         image = new Image(w, h, fill);
     }
+    
     void Script::save() {
         // Save current image to PNG file.
         string filename;
@@ -95,3 +101,5 @@ namespace prog {
         saveToPNG(filename, image);
     }
 }
+
+

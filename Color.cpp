@@ -2,21 +2,26 @@
 
 namespace prog {
     Color::Color() {
+        //default color black
         this->red_ = 0;
         this->green_ = 0;
         this->blue_ = 0;
     }
     Color::Color(const Color& other) {
+        //copy constructor
         this->red_ = other.red();
         this->green_ = other.green();
         this->blue_ = other.blue();
 
     }
     Color::Color(rgb_value red, rgb_value green, rgb_value blue) {
+        //constructor using supplied (r,g,b) values
         this->red_ = red;
         this->green_ = green;
         this->blue_ = blue;
     }
+
+    //get values for individual RGB color channels
     rgb_value Color::red() const {
         return this->red_;
     }
@@ -27,9 +32,7 @@ namespace prog {
         return this->blue_;
     }
 
-    // TODO: remove this DUMMY variable once you have appropriate fields for representing colors.
-    rgb_value DUMMY_rgb_value = 0; 
-
+    //get references for individual RGB color channels
     rgb_value& Color::red()  {
         return this->red_;
     }
