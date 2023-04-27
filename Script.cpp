@@ -65,8 +65,14 @@ namespace prog {
                 to_gray_scale();
                 continue;
             }
+
+            if (command == "replace") {
+                replace();
+                continue;
+            }
         }
     }
+    
     void Script::open() {
         // Replace current image (if any) with image read from PNG file.
         clear_image_if_any();
@@ -100,6 +106,7 @@ namespace prog {
         }
     }
     void Script::fill() {
+        //fill with a color partial of the image
         int x, y, w, h, r, g, b;
         input >> x >> y >> w >> h >> r >> g >> b;
         Color _fill(r,g,b);
@@ -110,14 +117,30 @@ namespace prog {
             }
         }
     }
-
     void Script::to_gray_scale() {
+        //gray tone of the image
         for (int y = 0; y < image->height(); y++){
             for (int x = 0; x < image->width(); x++){
                 Color& pixel = image->at(x,y);
                 int v = (pixel.red()+pixel.green()+pixel.blue())/3;
                 Color gray_tone(v,v,v);
                 image->at(x,y) = gray_tone;
+            }
+        }
+    }
+
+    void Script::replace() {
+        //replace all pixels of color1 to color2
+        int r1, g1, b1, r2, g2, b2;
+        input >> r1 >> g1 >> b1 >> r2 >> g2 >> b2;
+        Color _original(r1,g1,b1), _replace(r2,g2,b2);
+        
+        for (int y = 0; y < image->height(); y++){
+            for (int x = 0; x < image->width(); x++){
+                Color& pixel = image->at(x,y);
+                if (pixel.red() == r1 and pixel.green() == g1 and pixel.blue() == b1){
+                    image->at(x,y) = _replace;
+                }
             }
         }
     }
