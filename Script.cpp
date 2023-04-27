@@ -35,6 +35,8 @@ namespace prog {
         string command;
         while (input >> command) {
             cout << "Executing command '" << command << "' ..." << endl;
+            
+            //Script commands for initialization and I/O
             if (command == "open") {
                 open();
                 continue;
@@ -43,12 +45,16 @@ namespace prog {
                 blank();
                 continue;
             }
-            // Other commands require an image to be previously loaded.
             if (command == "save") {
                 save();
                 continue;
             } 
-            // TODO ...
+            
+            //Script commands for simple image manipulations (image dimensions are not altered)
+            if (command == "invert") {
+                invert();
+                continue;
+            }
 
         }
     }
@@ -72,5 +78,20 @@ namespace prog {
         string filename;
         input >> filename;
         saveToPNG(filename, image);
+    }
+    void Script::invert() {
+        /*
+        int width = Image->width();
+        int height = Image->height();
+        for (int i = 0; i < height; i++){
+            for (int j = 0; j < width; j++){
+                Color& pixel = Image->at(j,i);
+                pixel.red() = 255 - pixel.red();
+                pixel.green() = 255 - pixel.green();
+                pixel.blue() = 255 - pixel.blue();
+            }
+        }
+        */
+
     }
 }
