@@ -209,25 +209,35 @@ namespace prog {
         delete image;
         image = _crop;
     }
-    void Script::rotate_left() {
-        //Image* _rotate_left = new Image(image->width(),image->height());
 
+    void Script::rotate_left(){
+        int w = image->width();
+        int h = image->height();
+
+        Image* _rotated = new Image(h,w);
+
+        for (int y = 0; y < h; y++){
+            for (int x = 0; x < w; x++){
+                _rotated->at(y,w-1-x) = image->at(x,y);
+            }
+        }
+        delete image;
+        image = _rotated;
     }
 
     void Script::rotate_right(){
         int w = image->width();
         int h = image->height();
 
-        Image* _rotated = new Image(w,h);
+        Image* _rotated = new Image(h,w);
 
-        for (int x = 0; x < h; x++){
-            for (int y = 0; y < w; y++){
-                _rotated->at(h-1-y,x) = image->at(x,y); 
+        for (int y = 0; y < h; y++){
+            for (int x = 0; x < w; x++){
+                _rotated->at(h-1-y,x) = image->at(x,y);
             }
         }
         delete image;
         image = _rotated;
-        v_mirror();
     }
 
 }

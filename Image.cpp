@@ -65,14 +65,10 @@ namespace prog
 
   /*
   void Image::rotateRight(){
-<<<<<<< HEAD
     vector<vector<Color>> newImage(width_, vector<Color>(height_));
     for (int i = 0; i < height_;i++){
-=======
-    /*
     vector<vector<Color>> newImage;
     for (int i = 0; i < width_;i++){
->>>>>>> 7a6c6c82b1e9774e0a1a858a59c9a7ea81a1c2a7
       vector<Color> atual;
       for (int j = 0; j < width_;j++){
         atual.push_back(_image[j][i]);
@@ -82,7 +78,7 @@ namespace prog
 
     this->_image = newImage;
     v_mirror();
-    */
+    
 
   }
   
@@ -102,13 +98,10 @@ namespace prog
         for (int y = 0; y < height_ / 2; y++){
             for (int x = 0; x < width_; x++){
                 Color temp = this->at(x,y);
-<<<<<<< HEAD
                 this->_image[y][x] = this->_image[h-1-y][x];
                 this->_image[h-1-y][x] = temp;
-=======
                 this->at(x,y) = this->at(x,height_-1-y);
                 this->at(x,height_-1-y) = temp;
->>>>>>> 7a6c6c82b1e9774e0a1a858a59c9a7ea81a1c2a7
             }
         }
   }
