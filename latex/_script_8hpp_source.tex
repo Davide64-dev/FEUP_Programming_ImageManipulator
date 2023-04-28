@@ -1,0 +1,43 @@
+\hypertarget{_script_8hpp_source}{}\doxysection{Script.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_prog\_Script\_hpp\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_prog\_Script\_hpp\_\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Image.hpp"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{keyword}{namespace }prog}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10   \textcolor{keyword}{class }\mbox{\hyperlink{classprog_1_1_script}{Script}}}
+\DoxyCodeLine{11   \{}
+\DoxyCodeLine{12   \textcolor{keyword}{public}: }
+\DoxyCodeLine{13     \mbox{\hyperlink{classprog_1_1_script}{Script}}(\textcolor{keyword}{const} std::string \&filename);}
+\DoxyCodeLine{14     \mbox{\hyperlink{classprog_1_1_script}{\string~Script}}();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} run();}
+\DoxyCodeLine{16   \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \textcolor{comment}{// Current image.}}
+\DoxyCodeLine{18     \mbox{\hyperlink{classprog_1_1_image}{Image}} *image;}
+\DoxyCodeLine{19     \textcolor{comment}{// Input stream for reading script commands.}}
+\DoxyCodeLine{20     std::ifstream input;}
+\DoxyCodeLine{21   \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \textcolor{comment}{// Private functions}}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} clear\_image\_if\_any();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} open();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} blank();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} save();}
+\DoxyCodeLine{27     \textcolor{keywordtype}{void} invert();}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} fill();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} to\_gray\_scale();}
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} replace();}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} h\_mirror();}
+\DoxyCodeLine{32     \textcolor{keywordtype}{void} v\_mirror();}
+\DoxyCodeLine{33     \textcolor{keywordtype}{void} crop();}
+\DoxyCodeLine{34     \textcolor{keywordtype}{void} rotate\_left();}
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} rotate\_right();}
+\DoxyCodeLine{36   \};}
+\DoxyCodeLine{37 \}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
