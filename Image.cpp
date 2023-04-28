@@ -47,7 +47,7 @@ namespace prog
 
     this->_image = newImage;
     v_mirror();
-    
+
   }
   
 
@@ -64,13 +64,11 @@ namespace prog
   }
 
   void Image::v_mirror(){
-        int h = this->height();
-        int w = this->width();
-        for (int y = 0; y < h / 2; y++){
-            for (int x = 0; x < w; x++){
+        for (int y = 0; y < height_ / 2; y++){
+            for (int x = 0; x < width_; x++){
                 Color temp = this->at(x,y);
-                this->at(x,y) = this->at(x,h-1-y);
-                this->at(x,h-1-y) = temp;
+                this->at(x,y) = this->at(x,height_-1-y);
+                this->at(x,height_-1-y) = temp;
             }
         }
   }
