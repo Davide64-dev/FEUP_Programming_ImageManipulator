@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['red_0',['red',['../classprog_1_1_color.html#a743750afd8717e11e1cf8be889492fd6',1,'prog::Color::red() const'],['../classprog_1_1_color.html#a6a54963043b0058f3de72e9bf2a6b031',1,'prog::Color::red()']]]
+  ['green_0',['green',['../classprog_1_1_color.html#a7d7e86156b82ac3251213f7d9bbefd28',1,'prog::Color::green() const'],['../classprog_1_1_color.html#a6d2435252f07280cf48f2859565141dd',1,'prog::Color::green()']]]
 ];

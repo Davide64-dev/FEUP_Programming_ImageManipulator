@@ -2,40 +2,70 @@
 
 namespace prog
 {
+  /**
+   * @brief Constructor of a new Image with all pixels at the same color
+   * 
+   * @param w Width of the image
+   * @param h Height of the image
+   * @param fill Color that will fill the image
+   */
   Image::Image(int w, int h, const Color &fill){
-    //create image with width w, height h, and all pixels set to color fill
     this->width_ = w;
     this->height_ = h;
-
-    //it creates a matrix vector with the h and w dimensions and fill it with "fill" color
     this->_image = vector<vector<Color>>(h, vector<Color>(w, fill));
   }
 
+  /**
+   * @brief Destructor. Only use it if we use dynamically allocated memory explicty. It is not the case
+   * 
+   */
   Image::~Image(){
-    //destructor. Only use it if you use dynamically allocated memory explicitly.
   }
 
-  //get image width and height
+ /**
+  * @brief Getter of the width of the image
+  * 
+  * @return int width of the image
+  */
   int Image::width() const{
     return this->width_;
   }
+
+  /**
+   * @brief Getter of the height of the image
+   * 
+   * @return int height of the image
+   */
   int Image::height() const{
     return this->height_;
   }
 
-  //get mutable reference to the value of pixel (x,y)
-  //width x, height y
+  /**
+   * @brief Getter of mutable reference to the value of pixel (x,y)
+   * 
+   * @param x x coordinate
+   * @param y y coordinate
+   * @return Color& Reference of the pixel that is accessed
+   */
   Color& Image::at(int x, int y){
     return this->_image[y][x];
   }
 
-  //get read-only reference to the value of pixel (x,y)
+
+  /**
+   * @brief Getter read-only reference to the value of pixel
+   * 
+   * @param x x coordinate
+   * @param y y coordinate
+   * @return const Color& read-only reference of the pixel
+   */
   const Color& Image::at(int x, int y) const{
     return this->_image[y][x];
   }
 
 
   void Image::rotateRight(){
+    /*
     vector<vector<Color>> newImage;
     for (int i = 0; i < width_;i++){
       vector<Color> atual;
@@ -47,6 +77,7 @@ namespace prog
 
     this->_image = newImage;
     v_mirror();
+    */
 
   }
   
