@@ -47,6 +47,7 @@ namespace prog
 
     this->_image = newImage;
     v_mirror();
+    
   }
   
 
