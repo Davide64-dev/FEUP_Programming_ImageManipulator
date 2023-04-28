@@ -93,7 +93,7 @@ namespace prog {
             }
 
             if (command == "rotate_right") {
-                rotate_right();
+                //rotate_right();
                 continue;
             }
         }
@@ -211,6 +211,10 @@ namespace prog {
     void Script::rotate_left() {
         //Image* _rotate_left = new Image(image->width(),image->height());
 
+    }
+
+    void Script::rotate_right(){
+        this->image->rotateRight();
     }
 
 }

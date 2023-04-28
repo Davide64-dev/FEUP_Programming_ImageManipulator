@@ -33,4 +33,43 @@ namespace prog
   const Color& Image::at(int x, int y) const{
     return this->_image[y][x];
   }
+
+
+  void Image::rotateRight(){
+    vector<vector<Color>> newImage;
+    for (int i = 0; i < width_;i++){
+      vector<Color> atual;
+      for (int j = 0; j < height_;j++){
+        atual.push_back(_image[j][i]);
+      }
+      newImage.push_back(atual);
+    }
+
+    this->_image = newImage;
+    v_mirror();
+  }
+
+  void Image::h_mirror(){
+    int h = this->height();
+        int w = this->width();
+        for (int y = 0; y < h; y++){
+            for (int x = 0; x < w / 2; x++){
+                Color temp = this->at(x,y);
+                this->at(x,y) = this->at(w-1-x,y);
+                this->at(w-1-x,y) = temp;
+            }
+        }
+  }
+
+  void Image::v_mirror(){
+        int h = this->height();
+        int w = this->width();
+        for (int y = 0; y < h / 2; y++){
+            for (int x = 0; x < w; x++){
+                Color temp = this->at(x,y);
+                this->at(x,y) = this->at(x,h-1-y);
+                this->at(x,h-1-y) = temp;
+            }
+        }
+  }
 }
