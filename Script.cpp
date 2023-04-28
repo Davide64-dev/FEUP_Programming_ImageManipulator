@@ -7,8 +7,9 @@
 using namespace std;
 
 namespace prog {
-    // Use to read color values from a script file.
+    
     istream& operator>>(istream& input, Color& c) {
+    // Use to read color values from a script file.
         int r, g, b;
         input >> r >> g >> b;
         c.red() = r;
@@ -80,6 +81,21 @@ namespace prog {
                 v_mirror();
                 continue;
             }
+
+            if (command == "crop") {
+                crop();
+                continue;
+            }
+
+            if (command == "rotate_left") {
+                rotate_left();
+                continue;
+            }
+
+            if (command == "rotate_right") {
+                rotate_right();
+                continue;
+            }
         }
     }
     
@@ -138,7 +154,6 @@ namespace prog {
             }
         }
     }
-
     void Script::replace() {
         //replace all pixels of color1 to color2
         int r1, g1, b1, r2, g2, b2;
@@ -154,7 +169,6 @@ namespace prog {
             }
         }
     }
-
     void Script::h_mirror() {
         //horizontal mirror
         int h = image->height();
@@ -167,7 +181,6 @@ namespace prog {
             }
         }
     }
-
     void Script::v_mirror() {
         //vertical mirror
         int h = image->height();
@@ -180,4 +193,24 @@ namespace prog {
             }
         }
     }
+    void Script::crop() {
+        int x, y, w, h;
+        input >> x >> y >> w >> h;
+        Image* _crop = new Image(w,h);
+        
+        for (int i = y; i < y + h; i++){
+            for (int j = x; j < x + w; j++){
+                _crop->at(j-x,i-y) = image->at(j,i);
+            }
+        }
+
+        //del the original image and set _crop as the image
+        delete image;
+        image = _crop;
+    }
+    void Script::rotate_left() {
+        //Image* _rotate_left = new Image(image->width(),image->height());
+
+    }
+
 }
