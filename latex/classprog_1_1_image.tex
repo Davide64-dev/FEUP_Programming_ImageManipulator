@@ -1,0 +1,133 @@
+\hypertarget{classprog_1_1_image}{}\doxysection{prog\+::Image Class Reference}
+\label{classprog_1_1_image}\index{prog::Image@{prog::Image}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classprog_1_1_image_a1f043e5d410e50943fbc9fde671e3053}{Image}} (int w, int h, const \mbox{\hyperlink{classprog_1_1_color}{Color}} \&fill=\{255, 255, 255\})
+\begin{DoxyCompactList}\small\item\em Constructor of a new \mbox{\hyperlink{classprog_1_1_image}{Image}} with all pixels at the same color. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classprog_1_1_image_a6e2e5ad4aa4636606ad1f7a236835f20}{$\sim$\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Only use it if we use dynamically allocated memory explicty. It is not the case. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classprog_1_1_image_a79cbc5dd032fdea2b82f568cc161914e}{width}} () const
+\begin{DoxyCompactList}\small\item\em Getter of the width of the image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classprog_1_1_image_a642bcafed6556f68769c028d445bf37c}{height}} () const
+\begin{DoxyCompactList}\small\item\em Getter of the height of the image. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classprog_1_1_color}{Color}} \& \mbox{\hyperlink{classprog_1_1_image_a9742fa4fa53d96ed82113486ee03a9a1}{at}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Getter of mutable reference to the value of pixel (x,y) \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classprog_1_1_color}{Color}} \& \mbox{\hyperlink{classprog_1_1_image_a85a50b95055cf326e79dd17c23e0663b}{at}} (int x, int y) const
+\begin{DoxyCompactList}\small\item\em Getter read-\/only reference to the value of pixel. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classprog_1_1_image_af677e9b7c7ff0723387e3d219703c941}\label{classprog_1_1_image_af677e9b7c7ff0723387e3d219703c941}} 
+void {\bfseries rotate\+Right} ()
+\item 
+\mbox{\Hypertarget{classprog_1_1_image_abafb704e5035322b6cbb93d421111787}\label{classprog_1_1_image_abafb704e5035322b6cbb93d421111787}} 
+void {\bfseries h\+\_\+mirror} ()
+\item 
+\mbox{\Hypertarget{classprog_1_1_image_aabb28a9a9805d98c7f48eb0ad77bc595}\label{classprog_1_1_image_aabb28a9a9805d98c7f48eb0ad77bc595}} 
+void {\bfseries v\+\_\+mirror} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classprog_1_1_image_a1f043e5d410e50943fbc9fde671e3053}\label{classprog_1_1_image_a1f043e5d410e50943fbc9fde671e3053}} 
+\index{prog::Image@{prog::Image}!Image@{Image}}
+\index{Image@{Image}!prog::Image@{prog::Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}}
+{\footnotesize\ttfamily prog\+::\+Image\+::\+Image (\begin{DoxyParamCaption}\item[{int}]{w,  }\item[{int}]{h,  }\item[{const \mbox{\hyperlink{classprog_1_1_color}{Color}} \&}]{fill = {\ttfamily \{255,~255,~255\}} }\end{DoxyParamCaption})}
+
+
+
+Constructor of a new \mbox{\hyperlink{classprog_1_1_image}{Image}} with all pixels at the same color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em w} & Width of the image \\
+\hline
+{\em h} & Height of the image \\
+\hline
+{\em fill} & \mbox{\hyperlink{classprog_1_1_color}{Color}} that will fill the image \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classprog_1_1_image_a6e2e5ad4aa4636606ad1f7a236835f20}\label{classprog_1_1_image_a6e2e5ad4aa4636606ad1f7a236835f20}} 
+\index{prog::Image@{prog::Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!prog::Image@{prog::Image}}
+\doxysubsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily prog\+::\+Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destructor. Only use it if we use dynamically allocated memory explicty. It is not the case. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classprog_1_1_image_a9742fa4fa53d96ed82113486ee03a9a1}\label{classprog_1_1_image_a9742fa4fa53d96ed82113486ee03a9a1}} 
+\index{prog::Image@{prog::Image}!at@{at}}
+\index{at@{at}!prog::Image@{prog::Image}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classprog_1_1_color}{Color}} \& prog\+::\+Image\+::at (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Getter of mutable reference to the value of pixel (x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classprog_1_1_color}{Color}}\& Reference of the pixel that is accessed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprog_1_1_image_a85a50b95055cf326e79dd17c23e0663b}\label{classprog_1_1_image_a85a50b95055cf326e79dd17c23e0663b}} 
+\index{prog::Image@{prog::Image}!at@{at}}
+\index{at@{at}!prog::Image@{prog::Image}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classprog_1_1_color}{Color}} \& prog\+::\+Image\+::at (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption}) const}
+
+
+
+Getter read-\/only reference to the value of pixel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate \\
+\hline
+{\em y} & y coordinate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+const \mbox{\hyperlink{classprog_1_1_color}{Color}}\& read-\/only reference of the pixel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprog_1_1_image_a642bcafed6556f68769c028d445bf37c}\label{classprog_1_1_image_a642bcafed6556f68769c028d445bf37c}} 
+\index{prog::Image@{prog::Image}!height@{height}}
+\index{height@{height}!prog::Image@{prog::Image}}
+\doxysubsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily int prog\+::\+Image\+::height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter of the height of the image. 
+
+\begin{DoxyReturn}{Returns}
+int height of the image 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classprog_1_1_image_a79cbc5dd032fdea2b82f568cc161914e}\label{classprog_1_1_image_a79cbc5dd032fdea2b82f568cc161914e}} 
+\index{prog::Image@{prog::Image}!width@{width}}
+\index{width@{width}!prog::Image@{prog::Image}}
+\doxysubsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily int prog\+::\+Image\+::width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter of the width of the image. 
+
+\begin{DoxyReturn}{Returns}
+int width of the image 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Image.\+hpp\item 
+Image.\+cpp\end{DoxyCompactItemize}

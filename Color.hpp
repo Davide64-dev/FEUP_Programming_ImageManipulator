@@ -2,8 +2,17 @@
 #define __prog_Color_hpp__
 
 namespace prog
-{
+{ 
+  /**
+   * @brief unsinged char that represents an rgb_value in the range [0, 255]
+   * 
+   */
   typedef unsigned char rgb_value;
+
+  /**
+   * @brief This class is used to represent a color in the RGB representation system
+   * 
+   */
   class Color
   {
     private:

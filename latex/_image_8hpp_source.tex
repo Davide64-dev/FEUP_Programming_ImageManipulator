@@ -1,0 +1,33 @@
+\hypertarget{_image_8hpp_source}{}\doxysection{Image.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef \_\_prog\_Image\_hpp\_\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define \_\_prog\_Image\_hpp\_\_}}
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Color.hpp"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{namespace }prog}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9   \textcolor{keyword}{class }\mbox{\hyperlink{classprog_1_1_image}{Image}}}
+\DoxyCodeLine{10   \{}
+\DoxyCodeLine{11   \textcolor{keyword}{private}:}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} width\_;}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} height\_;}
+\DoxyCodeLine{14     vector<vector<Color>> \_image;}
+\DoxyCodeLine{15     }
+\DoxyCodeLine{16   \textcolor{keyword}{public}:}
+\DoxyCodeLine{17     \mbox{\hyperlink{classprog_1_1_image}{Image}}(\textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h, \textcolor{keyword}{const} \mbox{\hyperlink{classprog_1_1_color}{Color}} \&fill = \{255, 255, 255\});}
+\DoxyCodeLine{18     \mbox{\hyperlink{classprog_1_1_image_a6e2e5ad4aa4636606ad1f7a236835f20}{\string~Image}}();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{classprog_1_1_image_a79cbc5dd032fdea2b82f568cc161914e}{width}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{classprog_1_1_image_a642bcafed6556f68769c028d445bf37c}{height}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{21     \mbox{\hyperlink{classprog_1_1_color}{Color}} \&\mbox{\hyperlink{classprog_1_1_image_a9742fa4fa53d96ed82113486ee03a9a1}{at}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{22     \textcolor{keyword}{const} \mbox{\hyperlink{classprog_1_1_color}{Color}} \&\mbox{\hyperlink{classprog_1_1_image_a9742fa4fa53d96ed82113486ee03a9a1}{at}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y) \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keywordtype}{void} rotateRight();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} h\_mirror();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} v\_mirror();}
+\DoxyCodeLine{26   \};}
+\DoxyCodeLine{27 \}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
