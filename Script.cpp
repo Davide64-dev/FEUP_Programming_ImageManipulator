@@ -93,7 +93,7 @@ namespace prog {
             }
 
             if (command == "rotate_right") {
-                rotate_right();
+                //rotate_right();
                 continue;
             }
         }
