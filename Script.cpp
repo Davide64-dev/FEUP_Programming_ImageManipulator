@@ -181,6 +181,7 @@ namespace prog {
             }
         }
     }
+
     void Script::v_mirror() {
         //vertical mirror
         int h = image->height();
@@ -214,7 +215,19 @@ namespace prog {
     }
 
     void Script::rotate_right(){
-        this->image->rotateRight();
+        int w = image->width();
+        int h = image->height();
+
+        Image* _rotated = new Image(w,h);
+
+        for (int x = 0; x < h; x++){
+            for (int y = 0; y < w; y++){
+                _rotated->at(h-1-y,x) = image->at(x,y); 
+            }
+        }
+        delete image;
+        image = _rotated;
+        v_mirror();
     }
 
 }
