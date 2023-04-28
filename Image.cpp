@@ -47,6 +47,7 @@ namespace prog
     this->_image = newImage;
 
   }
+  
 
   void Image::h_mirror(){
     int h = this->height();
