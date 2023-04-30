@@ -96,6 +96,11 @@ namespace prog {
                 rotate_right();
                 continue;
             }
+
+            if (command == "add") {
+                add();
+                continue;
+            }
         }
     }
     
@@ -210,6 +215,7 @@ namespace prog {
         image = _crop;
     }
 
+    //rotate 90 degrees the image to the left or right
     void Script::rotate_left(){
         int w = image->width();
         int h = image->height();
@@ -221,6 +227,7 @@ namespace prog {
                 _rotated->at(y,w-1-x) = image->at(x,y);
             }
         }
+        //del the original image and set _rotated as the image
         delete image;
         image = _rotated;
     }
@@ -236,8 +243,33 @@ namespace prog {
                 _rotated->at(h-1-y,x) = image->at(x,y);
             }
         }
+        //del the original image and set _rotated as the image
         delete image;
         image = _rotated;
+    }
+
+    void Script::add(){
+        string filename;
+        input >> filename;
+        Image* image_add = loadFromPNG(filename);
+
+        int r, g, b, x, y;
+        input >> r >> g >> b >> x >> y;
+        Color neutral_color(r,g,b);
+
+        int i_ = 0;
+        for (int i = y; i < y + image_add->height(); i++){
+            int j_ = 0;
+            for (int j = x; j < x + image_add->width(); j++){
+                Color& pixel_add = image_add->at(j_,i_);
+                if (neutral_color.red() != pixel_add.red() or neutral_color.green() != pixel_add.green() or neutral_color.blue() != pixel_add.blue()){
+                    image->at(j,i) = image_add->at(j_,i_);
+                }
+                j_++;
+            }
+            i_++;
+        }
+        delete image_add;
     }
 
 }

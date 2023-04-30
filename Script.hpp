@@ -33,6 +33,7 @@ namespace prog
     void crop();
     void rotate_left();
     void rotate_right();
+    void add();
   };
 }
 #endif
