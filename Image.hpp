@@ -20,6 +20,8 @@ namespace prog
     int height() const;
     Color &at(int x, int y);
     const Color &at(int x, int y) const;
+    void median_filter(int ws);
+    static int median(vector<int> vetor);
     //void rotateRight();
     //void h_mirror();
     //void v_mirror();

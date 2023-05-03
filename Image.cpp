@@ -1,4 +1,6 @@
 #include "Image.hpp"
+#include <iostream>
+#include <algorithm>
 
 namespace prog
 {
@@ -52,6 +54,41 @@ namespace prog
   }
 
 
+  void Image::median_filter(int ws){
+    Color color = Color(255, 255, 255);
+    vector<vector<Color>> image = vector<vector<Color>>(height_, vector<Color>(width_, color));
+    for (int x = 0; x < width_;x++){
+      for (int y = 0; y< height_;y++){
+        std::vector<int> reds;
+        std::vector<int> greens;
+        std::vector<int> blues;
+        for (int nx = max(0, x - ws / 2); nx <= min(width() - 1, x + ws / 2);nx++){
+          for (int ny = max(0, y - ws / 2); ny <= min(height() - 1, y + ws /2); ny++){
+            reds.push_back(_image[ny][nx].red());
+            greens.push_back(_image[ny][nx].green());
+            blues.push_back(_image[ny][nx].blue());
+          }
+        }
+        int red = Image::median(reds);
+        int green = Image::median(greens);
+        int blue = Image::median(blues);
+        image[y][x].red() = red;
+        image[y][x].blue() = blue;
+        image[y][x].green() = green;
+      }
+    }
+    this->_image = image;
+  }
+
+  int Image::median(vector<int> vetor){
+    int size = vetor.size();
+    std::cout << size;
+    sort(vetor.begin(), vetor.end());
+    if (size % 2 == 1)
+      return vetor[size / 2];
+    return (vetor[size/2 -1] + vetor[size/2]) / 2;
+  }
+
   /**
    * @brief Getter read-only reference to the value of pixel
    * 
@@ -63,47 +100,4 @@ namespace prog
     return this->_image[y][x];
   }
 
-  /*
-  void Image::rotateRight(){
-    vector<vector<Color>> newImage(width_, vector<Color>(height_));
-    for (int i = 0; i < height_;i++){
-    vector<vector<Color>> newImage;
-    for (int i = 0; i < width_;i++){
-      vector<Color> atual;
-      for (int j = 0; j < width_;j++){
-        atual.push_back(_image[j][i]);
-      }
-      newImage.push_back(atual);
-    }
-
-    this->_image = newImage;
-    v_mirror();
-    
-
-  }
-  
-  void Image::h_mirror(){
-    int h = this->height();
-        int w = this->width();
-        for (int y = 0; y < h; y++){
-            for (int x = 0; x < w / 2; x++){
-                Color temp = this->at(x,y);
-                this->at(x,y) = this->at(w-1-x,y);
-                this->at(w-1-x,y) = temp;
-            }
-        }
-  }
-
-  void Image::v_mirror(){
-        for (int y = 0; y < height_ / 2; y++){
-            for (int x = 0; x < width_; x++){
-                Color temp = this->at(x,y);
-                this->_image[y][x] = this->_image[h-1-y][x];
-                this->_image[h-1-y][x] = temp;
-                this->at(x,y) = this->at(x,height_-1-y);
-                this->at(x,height_-1-y) = temp;
-            }
-        }
-  }
-  */
 }

@@ -101,6 +101,12 @@ namespace prog {
                 add();
                 continue;
             }
+
+            if (command == "median_filter"){
+                int wd;
+                input >> wd;
+                this->image->median_filter(wd);
+            }
         }
     }
     
