@@ -100,4 +100,34 @@ namespace prog
     return this->_image[y][x];
   }
 
+    /*
+    unordered_map<Color, string> Image::colorsToASCII() const{
+      unordered_map<Color, string> ret;
+      int begin = 35;
+      for (int i = 0; i < width_; i++){
+        for (int j = 0; j < height_; j++){
+          //if (!ret.count(_image[j][i])){
+            //ret[_image[j][i]] = begin;
+            //begin++;
+          //}
+        }
+      }
+    }
+    */
+
+
 }
+
+/*
+struct HashColor
+{
+
+    int operator() (const prog::Color& b) const {
+        return b.red() + b.blue() + b.green();
+    }
+
+    bool operator() (const prog::Color& b1, const prog::Color& b2) const {
+        return b1.red() == b2.red() && b1.blue() == b2.blue() && b1.green() == b2.green();
+    }
+};
+*/

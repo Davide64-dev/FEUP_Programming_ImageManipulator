@@ -1,4 +1,6 @@
 #include "Color.hpp"
+#include <string>
+using namespace std;
 
 namespace prog {
     /**
@@ -20,6 +22,16 @@ namespace prog {
         this->green_ = other.green();
         this->blue_ = other.blue();
 
+    }
+
+    Color::Color(const std::string& hex){
+        std::string red, green, blue;
+        red = hex.substr(1, 2);
+        green = hex.substr(3, 2);
+        blue = hex.substr(5, 2);
+        this->red_ = std::stoi(red, nullptr, 16);
+        this->green_ = std::stoi(green, nullptr, 16);
+        this->blue_ = std::stoi(blue, nullptr, 16);
     }
 
     /**
