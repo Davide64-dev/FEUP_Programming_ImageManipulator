@@ -131,8 +131,9 @@ namespace prog {
         input >> filename;
         saveToPNG(filename, image);
     }
+
     void Script::invert() {
-        //invert Color of image
+        //invert the colors of a image
         for (int y = 0; y < image->height(); y++){
             for (int x = 0; x < image->width(); x++){
                 Color& pixel = image->at(x,y);
@@ -142,8 +143,9 @@ namespace prog {
             }
         }
     }
+
     void Script::fill() {
-        //fill with a color partial of the image
+        //fill a part of image with a solid color
         int x, y, w, h, r, g, b;
         input >> x >> y >> w >> h >> r >> g >> b;
         Color _fill(r,g,b);
@@ -154,8 +156,9 @@ namespace prog {
             }
         }
     }
+
     void Script::to_gray_scale() {
-        //gray tone of the image
+        //grayed out a image
         for (int y = 0; y < image->height(); y++){
             for (int x = 0; x < image->width(); x++){
                 Color& pixel = image->at(x,y);
@@ -165,8 +168,9 @@ namespace prog {
             }
         }
     }
+
     void Script::replace() {
-        //replace all pixels of color1 to color2
+        //replace all pixel with color1 by color2
         int r1, g1, b1, r2, g2, b2;
         input >> r1 >> g1 >> b1 >> r2 >> g2 >> b2;
         Color _original(r1,g1,b1), _replace(r2,g2,b2);
@@ -180,6 +184,7 @@ namespace prog {
             }
         }
     }
+
     void Script::h_mirror() {
         //horizontal mirror
         int h = image->height();
@@ -205,7 +210,9 @@ namespace prog {
             }
         }
     }
+
     void Script::crop() {
+        //crop the image starting in (x,y) this the (w,h) dimensions
         int x, y, w, h;
         input >> x >> y >> w >> h;
         Image* _crop = new Image(w,h);
@@ -221,8 +228,8 @@ namespace prog {
         image = _crop;
     }
 
-    //rotate 90 degrees the image to the left or right
     void Script::rotate_left(){
+        //rotate the image 90 degrees to the left
         int w = image->width();
         int h = image->height();
 
@@ -239,6 +246,7 @@ namespace prog {
     }
 
     void Script::rotate_right(){
+        //rotate the image 90 degrees to the right
         int w = image->width();
         int h = image->height();
 
@@ -255,6 +263,9 @@ namespace prog {
     }
 
     void Script::add(){
+        //overlay one image on top of another assuming that it always fits on the original image.
+        //the top-left corner of the new image is placed at the position (x,y) of the original image.
+    
         string filename;
         input >> filename;
         Image* image_add = loadFromPNG(filename);
@@ -277,5 +288,7 @@ namespace prog {
         }
         delete image_add;
     }
+
+
 
 }
