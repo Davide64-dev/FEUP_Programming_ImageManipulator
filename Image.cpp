@@ -102,4 +102,21 @@ namespace prog
 
 
 
+    
+    map<Color, string> Image::colorsToASCII() const{
+      map<Color, string> ret;
+      char begin = 35;
+      for (int i = 0; i < width_; i++){
+        for (int j = 0; j < height_; j++){
+          if (!ret.count(_image[j][i])){
+            Color color = _image[j][i];
+            ret[color] = begin;
+            begin++;
+          }
+        }
+      }
+      return ret;
+    }
+    
 }
+

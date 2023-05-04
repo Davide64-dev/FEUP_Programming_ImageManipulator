@@ -1,5 +1,6 @@
 #ifndef __prog_Color_hpp__
 #define __prog_Color_hpp__
+#include <string>
 
 namespace prog
 { 
@@ -23,12 +24,16 @@ namespace prog
       Color();
       Color(const Color& c);
       Color(rgb_value r, rgb_value g, rgb_value b);
+      Color(const std::string& hex);
       rgb_value red() const;
       rgb_value& red();
       rgb_value green() const;
       rgb_value& green();
       rgb_value blue() const;
       rgb_value& blue();
+      bool operator<(const Color& other) const;
+      std::string toHex() const;
+      static std::string intToHex(int num);
       
   };
 }

@@ -34,6 +34,8 @@ namespace prog
     void rotate_left();
     void rotate_right();
     void add();
+    void xpm2_open();
+    void xpm2_save();
   };
 }
 #endif

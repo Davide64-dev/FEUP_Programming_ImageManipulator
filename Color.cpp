@@ -1,4 +1,9 @@
 #include "Color.hpp"
+#include <string>
+#include <map>
+#include <sstream>
+#include <iomanip>
+using namespace std;
 
 namespace prog {
     /**
@@ -20,6 +25,16 @@ namespace prog {
         this->green_ = other.green();
         this->blue_ = other.blue();
 
+    }
+
+    Color::Color(const std::string& hex){
+        std::string red, green, blue;
+        red = hex.substr(1, 2);
+        green = hex.substr(3, 2);
+        blue = hex.substr(5, 2);
+        this->red_ = std::stoi(red, nullptr, 16);
+        this->green_ = std::stoi(green, nullptr, 16);
+        this->blue_ = std::stoi(blue, nullptr, 16);
     }
 
     /**
@@ -87,5 +102,37 @@ namespace prog {
      */
     rgb_value& Color::blue()  {
       return this->blue_;
+    }
+
+    bool Color::operator<(const Color& other) const{
+        if (red_ == other.red()){
+            if (green_ == other.green()){
+                return blue_ < other.blue();
+            }
+            return green_ < other.green();
+        }
+        return red_ < other.red();
+    }
+
+    std::string Color::toHex() const{
+        string a = "#";
+        a += intToHex(red_);
+        a+= intToHex(green_);
+        a+= intToHex(blue_);
+        return a;
+    }
+
+    std::string Color::intToHex(int num){
+        string res = "";
+        int first = num / 16;
+        int second = num % 16;
+        map<int, char> converter = {{10, 'A'}, {11, 'B'},{12, 'C'}, {13, 'D'},{14, 'E'}, {15, 'F'}};
+        if (first >= 10) res.push_back(converter[first]);
+        else res.push_back(to_string(first)[0]);
+
+        if (second >= 10) res.push_back(converter[second]);
+        else res.push_back(to_string(second)[0]);
+
+        return res;
     }
 }
