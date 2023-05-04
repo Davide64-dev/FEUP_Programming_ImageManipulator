@@ -2,7 +2,7 @@
 #define __prog_Image_hpp__
 #include "Color.hpp"
 #include <vector>
-#include <unordered_map>
+#include <map>
 using namespace std;
 
 namespace prog
@@ -23,7 +23,7 @@ namespace prog
     const Color &at(int x, int y) const;
     void median_filter(int ws);
     static int median(vector<int> vetor);
-    unordered_map<Color, string> colorsToASCII() const;
+    map<Color, string> colorsToASCII() const;
     //void rotateRight();
     //void h_mirror();
     //void v_mirror();
