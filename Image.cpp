@@ -53,15 +53,26 @@ namespace prog
     return this->_image[y][x];
   }
 
+  /**
+   * @brief Getter read-only reference to the value of pixel
+   * 
+   * @param x x coordinate
+   * @param y y coordinate
+   * @return const Color& read-only reference of the pixel
+   */
+  const Color& Image::at(int x, int y) const{
+    return this->_image[y][x];
+  }
 
   void Image::median_filter(int ws){
     Color color = Color(255, 255, 255);
     vector<vector<Color>> image = vector<vector<Color>>(height_, vector<Color>(width_, color));
+    
     for (int x = 0; x < width_;x++){
       for (int y = 0; y< height_;y++){
-        std::vector<int> reds;
-        std::vector<int> greens;
-        std::vector<int> blues;
+        vector<int> reds;
+        vector<int> greens;
+        vector<int> blues;
         for (int nx = max(0, x - ws / 2); nx <= min(width() - 1, x + ws / 2);nx++){
           for (int ny = max(0, y - ws / 2); ny <= min(height() - 1, y + ws /2); ny++){
             reds.push_back(_image[ny][nx].red());
@@ -89,15 +100,6 @@ namespace prog
     return (vetor[size/2 -1] + vetor[size/2]) / 2;
   }
 
-  /**
-   * @brief Getter read-only reference to the value of pixel
-   * 
-   * @param x x coordinate
-   * @param y y coordinate
-   * @return const Color& read-only reference of the pixel
-   */
-  const Color& Image::at(int x, int y) const{
-    return this->_image[y][x];
-  }
+
 
 }
