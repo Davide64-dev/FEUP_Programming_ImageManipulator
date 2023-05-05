@@ -21,8 +21,7 @@ namespace prog
    * @brief Destructor. Only use it if we use dynamically allocated memory explicty. It is not the case
    * 
    */
-  Image::~Image(){
-  }
+  Image::~Image()=default;
 
  /**
   * @brief Getter of the width of the image
@@ -64,59 +63,179 @@ namespace prog
     return this->_image[y][x];
   }
 
-  void Image::median_filter(int ws){
+  void Image::invert() {
+    //invert Color of image
+    for (int y = 0; y < height_; y++){
+      for (int x = 0; x < width_; x++){
+        Color& pixel = at(x,y);
+          pixel = Color(255,255,255) - pixel;
+      }
+    }
+  }
+
+  void Image::fill(int x, int y, int w, int h, const Color& _fill) {
+    //fill with a color partial of the image
+    for (int i = y; i < y + h; i++){
+      for (int j = x; j < x + w; j++){
+        at(j,i) = _fill;
+      }
+    }
+  }
+
+  void Image::to_gray_scale() {
+    //gray tone of the image
+    for (int y = 0; y < height_; y++){
+      for (int x = 0; x < width_; x++){
+        int v = (at(x,y).red() + at(x,y).green() + at(x,y).blue())/3;
+        Color gray_tone(v,v,v);
+        at(x,y) = gray_tone;
+      }
+    }
+  }
+
+  void Image::replace(Color _original, Color _replace) {
+    //replace all pixels of color1 to color2
+    for (int y = 0; y < height_; y++){
+      for (int x = 0; x < width_; x++){
+        if (at(x,y) == _original){
+          at(x,y) = _replace;
+        }
+      }
+    }
+  }
+
+  void Image::h_mirror() {
+    //horizontal mirror
+    for (int y = 0; y < height_; y++){
+      for (int x = 0; x < width_ / 2; x++){
+        Color temp = at(x,y);
+        at(x,y) = at(width_-1-x,y);
+        at(width_-1-x,y) = temp;
+      }
+    }
+  }
+
+  void Image::v_mirror() {
+    //vertical mirror
+    for (int y = 0; y < height_ / 2; y++){
+      for (int x = 0; x < width_; x++){
+        Color temp = at(x,y);
+        at(x,y) = at(x,height_-1-y);
+        at(x,height_-1-y) = temp;
+      }
+    }
+  }
+
+  void Image::crop(int x, int y, int w, int h) {
+    //new image object
+    Image _crop(w,h);
+    for (int i = y; i < y + h; i++){
+      for (int j = x; j < x + w; j++){
+        _crop.at(j-x,i-y) = at(j,i);
+      }
+    }
+    //replace the original image by the new image object
+    _image = _crop._image;
+
+    //set the dimensions of the new image;
+    width_ = w;
+    height_ = h;
+  }
+
+  //rotate 90 degrees the image to the left or right
+  void Image::rotate_left() {
+    Image _rotated(height_,width_);
+    for (int y = 0; y < height_; y++){
+      for (int x = 0; x < width_; x++){
+        _rotated.at(y,width_-1-x) = at(x,y);
+      }
+    }
+    //replace the original image by the new image object
+    _image = _rotated._image;
+
+    //swap the width and height;
+    swap(width_,height_);
+  }
+
+  void Image::rotate_right() {
+    Image _rotated(height_,width_);
+    for (int y = 0; y < height_; y++){
+      for (int x = 0; x < width_; x++){
+        _rotated.at(height_-1-y,x) = at(x,y);
+      }
+    }
+    //replace the original image by the new image object
+    _image = _rotated._image;
+
+    //swap the width and height;
+    swap(width_,height_);
+  }
+
+  void Image::add(Image *image_add, Color neutral_color, int x, int y) {
+      int i_ = 0;
+      for (int i = y; i < y + image_add->height(); i++){
+          int j_ = 0;
+          for (int j = x; j < x + image_add->width(); j++){
+            Color& pixel_add = image_add->at(j_,i_);
+            if (!(neutral_color == pixel_add)){
+              at(j,i) = image_add->at(j_,i_);
+            }
+            j_++;
+          }
+          i_++;
+      }
+      delete image_add;
+  }
+
+  void Image::median_filter(int ws) {
     Color color = Color(255, 255, 255);
     vector<vector<Color>> image = vector<vector<Color>>(height_, vector<Color>(width_, color));
     
     for (int x = 0; x < width_;x++){
       for (int y = 0; y< height_;y++){
-        vector<int> reds;
-        vector<int> greens;
-        vector<int> blues;
+
+        vector<int> reds, greens, blues;
+
         for (int nx = max(0, x - ws / 2); nx <= min(width() - 1, x + ws / 2);nx++){
           for (int ny = max(0, y - ws / 2); ny <= min(height() - 1, y + ws /2); ny++){
-            reds.push_back(_image[ny][nx].red());
-            greens.push_back(_image[ny][nx].green());
-            blues.push_back(_image[ny][nx].blue());
+            reds.push_back(at(nx,ny).red());
+            greens.push_back(at(nx,ny).green());
+            blues.push_back(at(nx,ny).blue());
+
           }
         }
+
         int red = Image::median(reds);
         int green = Image::median(greens);
         int blue = Image::median(blues);
-        image[y][x].red() = red;
-        image[y][x].blue() = blue;
-        image[y][x].green() = green;
+        
+        //operator= foi implementado no Color
+        image[y][x] = Color(red, green, blue);
       }
     }
-    this->_image = image;
+    _image = image;
   }
 
-  int Image::median(vector<int> vetor){
-    int size = vetor.size();
-    std::cout << size;
+  int Image::median(vector<int> vetor) {
     sort(vetor.begin(), vetor.end());
+    int size = vetor.size();
     if (size % 2 == 1)
       return vetor[size / 2];
     return (vetor[size/2 -1] + vetor[size/2]) / 2;
   }
 
-
-
-    
-    map<Color, string> Image::colorsToASCII() const{
-      map<Color, string> ret;
-      char begin = 35;
-      for (int i = 0; i < width_; i++){
-        for (int j = 0; j < height_; j++){
-          if (!ret.count(_image[j][i])){
-            Color color = _image[j][i];
-            ret[color] = begin;
-            begin++;
-          }
+  map<Color, string> Image::colorsToASCII() const {
+    map<Color, string> ret;
+    char begin = 35;
+    for (int i = 0; i < width_; i++){
+      for (int j = 0; j < height_; j++){
+        if (!ret.count(at(i,j))){
+          Color color = at(i,j);
+          ret[color] = begin;
+          begin++;
         }
       }
-      return ret;
     }
-    
+    return ret;
+  }
 }
-

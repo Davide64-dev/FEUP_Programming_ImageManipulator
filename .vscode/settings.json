@@ -2,6 +2,12 @@
     "files.associations": {
         "*.embeddedhtml": "html",
         "*.s": "platformio-debug.asm",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "array": "cpp",
+        "string_view": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "*.tcc": "cpp"
     }
 }

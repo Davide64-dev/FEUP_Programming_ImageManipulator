@@ -21,12 +21,19 @@ namespace prog
     int height() const;
     Color &at(int x, int y);
     const Color &at(int x, int y) const;
+    void invert();
+    void fill(int x, int y, int w, int h, const Color &_fill);
+    void to_gray_scale();
+    void replace(Color _original, Color _replace);
+    void h_mirror();
+    void v_mirror();
+    void crop(int x, int y, int w, int h);
+    void rotate_left();
+    void rotate_right();
+    void add(Image *image_add, Color neutral_color, int x, int y);
     void median_filter(int ws);
     static int median(vector<int> vetor);
     map<Color, string> colorsToASCII() const;
-    //void rotateRight();
-    //void h_mirror();
-    //void v_mirror();
   };
 }
 #endif

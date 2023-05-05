@@ -32,8 +32,12 @@ namespace prog
       rgb_value blue() const;
       rgb_value& blue();
       bool operator<(const Color& other) const;
+      bool operator==(const Color& other) const;
+      Color& operator=(const Color& other);
+      Color& operator-(const Color& other);
       std::string toHex() const;
       static std::string intToHex(int num);
+
       
   };
 }

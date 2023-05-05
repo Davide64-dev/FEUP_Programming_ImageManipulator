@@ -53,59 +53,73 @@ namespace prog {
             
             //Script commands for simple image manipulations (image dimensions are not altered)
             if (command == "invert") {
-                invert();
+                image->invert();
                 continue;
             }
 
             if (command == "fill") {
-                fill();
+                int x, y, w, h, r, g, b;
+                input >> x >> y >> w >> h >> r >> g >> b;
+                Color _fill(r,g,b);
+                image->fill(x,y,w,h,_fill);
                 continue;
             }
 
             if (command == "to_gray_scale") {
-                to_gray_scale();
+                image->to_gray_scale();
                 continue;
             }
 
             if (command == "replace") {
-                replace();
+                int r1, g1, b1, r2, g2, b2;
+                input >> r1 >> g1 >> b1 >> r2 >> g2 >> b2;
+                Color _original(r1,g1,b1), _replace(r2,g2,b2);
+                image->replace(_original, _replace);
                 continue;
             }
 
             if (command == "h_mirror") {
-                h_mirror();
+                image->h_mirror();
                 continue;
             }
 
             if (command == "v_mirror") {
-                v_mirror();
+                image->v_mirror();
                 continue;
             }
 
             if (command == "crop") {
-                crop();
+                int x, y, w, h;
+                input >> x >> y >> w >> h;
+                image->crop(x,y,w,h);
                 continue;
             }
 
             if (command == "rotate_left") {
-                rotate_left();
+                image->rotate_left();
                 continue;
             }
 
             if (command == "rotate_right") {
-                rotate_right();
+                image->rotate_right();
                 continue;
             }
 
             if (command == "add") {
-                add();
+                string filename;
+                input >> filename;
+                Image *image_add = loadFromPNG(filename);
+                int r, g, b, x, y;
+                input >> r >> g >> b >> x >> y;
+                Color neutral_color(r,g,b);
+                image->add(image_add,neutral_color,x,y);
                 continue;
             }
 
             if (command == "median_filter"){
                 int wd;
                 input >> wd;
-                this->image->median_filter(wd);
+                image->median_filter(wd);
                 continue;
             }
 
@@ -135,6 +149,7 @@ namespace prog {
         input >> filename;
         image = loadFromXPM2(filename);
     }
+
     void Script::blank() {
         // Replace current image (if any) with blank image.
         clear_image_if_any();
@@ -143,6 +158,7 @@ namespace prog {
         input >> w >> h >> fill;
         image = new Image(w, h, fill);
     }
+
     void Script::save() {
         // Save current image to PNG file.
         string filename;
@@ -156,6 +172,7 @@ namespace prog {
         saveToXPM2(filename, image);
     }
 
+/*
     void Script::invert() {
         //invert Color of image
         for (int y = 0; y < image->height(); y++){
@@ -166,7 +183,8 @@ namespace prog {
                     pixel.blue() = 255 - pixel.blue();
             }
         }
-    }
+    }*/
+    /*
     void Script::fill() {
         //fill with a color partial of the image
         int x, y, w, h, r, g, b;
@@ -178,7 +196,8 @@ namespace prog {
                 image->at(j,i) = _fill;
             }
         }
-    }
+    }*/
+    /*
     void Script::to_gray_scale() {
         //gray tone of the image
         for (int y = 0; y < image->height(); y++){
@@ -189,7 +208,8 @@ namespace prog {
                 image->at(x,y) = gray_tone;
             }
         }
-    }
+    }*/
+    /*
     void Script::replace() {
         //replace all pixels of color1 to color2
         int r1, g1, b1, r2, g2, b2;
@@ -204,7 +224,8 @@ namespace prog {
                 }
             }
         }
-    }
+    }*/
+    /*
     void Script::h_mirror() {
         //horizontal mirror
         int h = image->height();
@@ -229,7 +250,9 @@ namespace prog {
                 image->at(x,h-1-y) = temp;
             }
         }
-    }
+    }*/
+    
+    /*
     void Script::crop() {
         int x, y, w, h;
         input >> x >> y >> w >> h;
@@ -244,8 +267,10 @@ namespace prog {
         //del the original image and set _crop as the image
         delete image;
         image = _crop;
-    }
+    }*/
 
+
+    /*
     //rotate 90 degrees the image to the left or right
     void Script::rotate_left(){
         int w = image->width();
@@ -277,8 +302,9 @@ namespace prog {
         //del the original image and set _rotated as the image
         delete image;
         image = _rotated;
-    }
+    }*/
 
+    /*
     void Script::add(){
         string filename;
         input >> filename;
@@ -302,5 +328,5 @@ namespace prog {
         }
         delete image_add;
     }
-
+    */
 }

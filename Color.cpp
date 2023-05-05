@@ -114,25 +114,47 @@ namespace prog {
         return red_ < other.red();
     }
 
+    bool Color::operator==(const Color& other) const{
+        if (red_ == other.red() and green_ == other.green() and blue_ == other.blue()) return true;
+        return false;
+    }
+
+    Color& Color::operator=(const Color& other){
+        red_ = other.red();
+        green_ = other.green();
+        blue_ = other.blue();
+        return *this;
+    }
+
+    Color& Color::operator-(const Color& other){
+        red_ -= other.red();
+        green_ -= other.green();
+        blue_ -= other.blue();
+        return *this;
+    }
+
+
     std::string Color::toHex() const{
-        string a = "#";
-        a += intToHex(red_);
-        a+= intToHex(green_);
-        a+= intToHex(blue_);
-        return a;
+        string HexCode = "#";
+        HexCode += intToHex(red_);
+        HexCode += intToHex(green_);
+        HexCode += intToHex(blue_);
+        return HexCode;
     }
 
     std::string Color::intToHex(int num){
-        string res = "";
+        string HexCode = "";
         int first = num / 16;
         int second = num % 16;
         map<int, char> converter = {{10, 'A'}, {11, 'B'},{12, 'C'}, {13, 'D'},{14, 'E'}, {15, 'F'}};
-        if (first >= 10) res.push_back(converter[first]);
-        else res.push_back(to_string(first)[0]);
+        
+        if (first >= 10) HexCode.push_back(converter[first]);
+        else HexCode.push_back(to_string(first)[0]);
 
-        if (second >= 10) res.push_back(converter[second]);
-        else res.push_back(to_string(second)[0]);
+        if (second >= 10) HexCode.push_back(converter[second]);
+        else HexCode.push_back(to_string(second)[0]);
 
-        return res;
+        return HexCode;
     }
+
 }
