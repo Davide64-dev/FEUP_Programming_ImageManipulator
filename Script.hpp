@@ -7,6 +7,10 @@
 
 namespace prog
 {
+  /**
+   * @brief This is the class that is used to manage the running process
+   * 
+   */
   class Script
   {
   public: 
@@ -24,16 +28,6 @@ namespace prog
     void open();
     void blank();
     void save();
-    //void invert();
-    //void fill();
-    //void to_gray_scale();
-    //void replace();
-    //void h_mirror();
-    //void v_mirror();
-    //void crop();
-    //void rotate_left();
-    //void rotate_right();
-    //void add();
     void xpm2_open();
     void xpm2_save();
   };

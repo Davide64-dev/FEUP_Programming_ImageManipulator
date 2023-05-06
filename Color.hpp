@@ -17,8 +17,20 @@ namespace prog
   class Color
   {
     private:
+    /**
+     * @brief Red component of the Color
+     * 
+     */
       rgb_value red_;
+      /**
+       * @brief Green component of the Color
+       * 
+       */
       rgb_value green_;
+      /**
+       * @brief Blue component of the Color
+       * 
+       */
       rgb_value blue_;
     public:
       Color();
@@ -31,6 +43,8 @@ namespace prog
       rgb_value& green();
       rgb_value blue() const;
       rgb_value& blue();
+      void invert();
+      void to_gray_scale();
       bool operator<(const Color& other) const;
       bool operator==(const Color& other) const;
       Color& operator=(const Color& other);

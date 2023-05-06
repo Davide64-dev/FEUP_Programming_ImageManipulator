@@ -6,12 +6,28 @@
 using namespace std;
 
 namespace prog
-{
+{ 
+  /**
+   * @brief This class is used to represent an image
+   * 
+   */
   class Image
   {
   private:
+  /**
+   * @brief Width of the image
+   * 
+   */
     int width_;
+    /**
+     * @brief Height of the image
+     * 
+     */
     int height_;
+    /**
+     * @brief Matrix of pixels (class Color) that represents the image itself
+     * 
+     */
     vector<vector<Color>> _image;
     
   public:

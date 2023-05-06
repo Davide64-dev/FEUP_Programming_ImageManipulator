@@ -63,16 +63,28 @@ namespace prog
     return this->_image[y][x];
   }
 
+  /**
+   * @brief Inverter of every color of the image
+   * 
+   */
   void Image::invert() {
     //invert Color of image
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
-        Color& pixel = at(x,y);
-          pixel = Color(255,255,255) - pixel;
+        at(x, y).invert();
       }
     }
   }
 
+  /**
+   * @brief Method that fills some pixels of an image with a given Color
+   * 
+   * @param x Upper left corner x component of the fill
+   * @param y Upper left corner y component of the fill
+   * @param w Width of the fill
+   * @param h Height of the fill
+   * @param _fill Color to be filled in the image
+   */
   void Image::fill(int x, int y, int w, int h, const Color& _fill) {
     //fill with a color partial of the image
     for (int i = y; i < y + h; i++){
@@ -82,17 +94,25 @@ namespace prog
     }
   }
 
+  /**
+   * @brief Transforms that image into a gray-scale image
+   * 
+   */
   void Image::to_gray_scale() {
     //gray tone of the image
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
-        int v = (at(x,y).red() + at(x,y).green() + at(x,y).blue())/3;
-        Color gray_tone(v,v,v);
-        at(x,y) = gray_tone;
+        at(x,y).to_gray_scale();
       }
     }
   }
 
+  /**
+   * @brief Replace all pixels of the image with a given color into other color
+   * 
+   * @param _original The original color that will be replaced
+   * @param _replace The new color
+   */
   void Image::replace(Color _original, Color _replace) {
     //replace all pixels of color1 to color2
     for (int y = 0; y < height_; y++){
@@ -104,6 +124,11 @@ namespace prog
     }
   }
 
+  /**
+   * @brief Turns the image into an image symmetrical about a horizontal 
+   * line in the center of the image
+   * 
+   */
   void Image::h_mirror() {
     //horizontal mirror
     for (int y = 0; y < height_; y++){
@@ -115,6 +140,11 @@ namespace prog
     }
   }
 
+  /**
+   * @brief Turns the image into an image symmetrical about a vertical 
+   * line in the center of the image
+   * 
+   */
   void Image::v_mirror() {
     //vertical mirror
     for (int y = 0; y < height_ / 2; y++){
@@ -126,6 +156,16 @@ namespace prog
     }
   }
 
+  /**
+   * @brief Crop the image, reducing it to all pixels 
+   * contained in the rectangle defined by top-left corner (x, y), 
+   * width w, and height h
+   * 
+   * @param x Upper left corner x component of the fill
+   * @param y Upper left corner y component of the fill
+   * @param w Width of the rectangle
+   * @param h Height of the rectangle
+   */
   void Image::crop(int x, int y, int w, int h) {
     //new image object
     Image _crop(w,h);
@@ -142,7 +182,10 @@ namespace prog
     height_ = h;
   }
 
-  //rotate 90 degrees the image to the left or right
+  /**
+   * @brief Rotate 90 degrees the image to the left
+   * 
+   */
   void Image::rotate_left() {
     Image _rotated(height_,width_);
     for (int y = 0; y < height_; y++){
@@ -157,6 +200,10 @@ namespace prog
     swap(width_,height_);
   }
 
+  /**
+   * @brief Rotate 90 degrees the image to the right
+   * 
+   */
   void Image::rotate_right() {
     Image _rotated(height_,width_);
     for (int y = 0; y < height_; y++){
@@ -171,6 +218,14 @@ namespace prog
     swap(width_,height_);
   }
 
+  /**
+   * @brief Adds a given image to a current image, except a given color
+   * 
+   * @param image_add Image to be added
+   * @param neutral_color Color to be ignored
+   * @param x Top-left x component of the image to be added
+   * @param y Top-left y component of the image to be added
+   */
   void Image::add(Image *image_add, Color neutral_color, int x, int y) {
       int i_ = 0;
       for (int i = y; i < y + image_add->height(); i++){
@@ -187,6 +242,11 @@ namespace prog
       delete image_add;
   }
 
+  /**
+   * @brief Median filter used to remove noise from an image
+   * 
+   * @param ws Window size of the median calculator
+   */
   void Image::median_filter(int ws) {
     Color color = Color(255, 255, 255);
     vector<vector<Color>> image = vector<vector<Color>>(height_, vector<Color>(width_, color));
@@ -216,6 +276,13 @@ namespace prog
     _image = image;
   }
 
+  /**
+   * @brief Static method tthat calculates the median of a vector of integer. The vector doesn't need
+   * to be ordered
+   * 
+   * @param vetor Vector
+   * @return int Median
+   */
   int Image::median(vector<int> vetor) {
     sort(vetor.begin(), vetor.end());
     int size = vetor.size();
@@ -224,6 +291,12 @@ namespace prog
     return (vetor[size/2 -1] + vetor[size/2]) / 2;
   }
 
+  /**
+   * @brief Creates a map that maps every different color of the image and assigns every
+   *  color to an ascii character
+   * 
+   * @return map<Color, string> The mapping
+   */
   map<Color, string> Image::colorsToASCII() const {
     map<Color, string> ret;
     char begin = 35;
