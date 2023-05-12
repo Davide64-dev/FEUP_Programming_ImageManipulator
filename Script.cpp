@@ -9,7 +9,7 @@ using namespace std;
 namespace prog {
     
     /**
-     * @brief Override of operator >>
+     * @brief Override of '>>' operator
      * 
      * @param input The input variable
      * @param c The color that will be assigned
@@ -36,7 +36,7 @@ namespace prog {
     }
 
     /**
-     * @brief Clear the image of the Script
+     * @brief Clear the image
      * 
      */
     void Script::clear_image_if_any() {

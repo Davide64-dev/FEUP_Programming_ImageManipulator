@@ -5,7 +5,7 @@
 namespace prog
 {
   /**
-   * @brief Constructor of a new Image with all pixels at the same color
+   * @brief Constructor of a new Image with all pixels set to the same color
    * 
    * @param w Width of the image
    * @param h Height of the image
@@ -18,7 +18,7 @@ namespace prog
   }
 
   /**
-   * @brief Destructor. Only use it if we use dynamically allocated memory explicty. It is not the case
+   * @brief Destructor. Only use it if we use dynamically allocated memory explicty (we don't)
    * 
    */
   Image::~Image()=default;
@@ -26,7 +26,7 @@ namespace prog
  /**
   * @brief Getter of the width of the image
   * 
-  * @return int width of the image
+  * @return int Width of the image
   */
   int Image::width() const{
     return this->width_;
@@ -35,7 +35,7 @@ namespace prog
   /**
    * @brief Getter of the height of the image
    * 
-   * @return int height of the image
+   * @return int Height of the image
    */
   int Image::height() const{
     return this->height_;
@@ -46,25 +46,25 @@ namespace prog
    * 
    * @param x x coordinate
    * @param y y coordinate
-   * @return Color& Reference of the pixel that is accessed
+   * @return Color& Reference to the pixel that is accessed
    */
   Color& Image::at(int x, int y){
     return this->_image[y][x];
   }
 
   /**
-   * @brief Getter read-only reference to the value of pixel
+   * @brief Getter of read-only reference to the value of pixel
    * 
    * @param x x coordinate
    * @param y y coordinate
-   * @return const Color& read-only reference of the pixel
+   * @return const Color& read-only reference to a pixel
    */
   const Color& Image::at(int x, int y) const{
     return this->_image[y][x];
   }
 
   /**
-   * @brief Inverter of every color of the image
+   * @brief Inverter of every color in the image
    * 
    */
   void Image::invert() {
@@ -77,13 +77,13 @@ namespace prog
   }
 
   /**
-   * @brief Method that fills some pixels of an image with a given Color
+   * @brief Method that fills part of an image with a given Color
    * 
    * @param x Upper left corner x component of the fill
    * @param y Upper left corner y component of the fill
    * @param w Width of the fill
    * @param h Height of the fill
-   * @param _fill Color to be filled in the image
+   * @param _fill Color to be used to fill in
    */
   void Image::fill(int x, int y, int w, int h, const Color& _fill) {
     //fill with a color partial of the image
@@ -95,7 +95,7 @@ namespace prog
   }
 
   /**
-   * @brief Transforms that image into a gray-scale image
+   * @brief Converts image to gray scale
    * 
    */
   void Image::to_gray_scale() {
@@ -108,13 +108,13 @@ namespace prog
   }
 
   /**
-   * @brief Replace all pixels of the image with a given color into other color
+   * @brief Replace all pixels in the image of a given color with a new color.
    * 
    * @param _original The original color that will be replaced
    * @param _replace The new color
    */
   void Image::replace(Color _original, Color _replace) {
-    //replace all pixels of color1 to color2
+    //replace all pixels of color1 with color2
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
         if (at(x,y) == _original){
@@ -125,8 +125,7 @@ namespace prog
   }
 
   /**
-   * @brief Turns the image into an image symmetrical about a horizontal 
-   * line in the center of the image
+   * @brief Horizontally mirrors the image
    * 
    */
   void Image::h_mirror() {
@@ -141,8 +140,7 @@ namespace prog
   }
 
   /**
-   * @brief Turns the image into an image symmetrical about a vertical 
-   * line in the center of the image
+   * @brief Vertically mirrors the image
    * 
    */
   void Image::v_mirror() {
@@ -161,8 +159,8 @@ namespace prog
    * contained in the rectangle defined by top-left corner (x, y), 
    * width w, and height h
    * 
-   * @param x Upper left corner x component of the fill
-   * @param y Upper left corner y component of the fill
+   * @param x x component of the upper left corner of the rectangle
+   * @param y y component of the upper left corner of the rectangle
    * @param w Width of the rectangle
    * @param h Height of the rectangle
    */
@@ -174,7 +172,7 @@ namespace prog
         _crop.at(j-x,i-y) = at(j,i);
       }
     }
-    //replace the original image by the new image object
+    //replace the original image with the new image object
     _image = _crop._image;
 
     //set the dimensions of the new image;
@@ -183,7 +181,7 @@ namespace prog
   }
 
   /**
-   * @brief Rotate 90 degrees the image to the left
+   * @brief Rotate the image 90 degrees to the left
    * 
    */
   void Image::rotate_left() {
@@ -193,7 +191,7 @@ namespace prog
         _rotated.at(y,width_-1-x) = at(x,y);
       }
     }
-    //replace the original image by the new image object
+    //replace the original image with the new image object
     _image = _rotated._image;
 
     //swap the width and height;
@@ -201,7 +199,7 @@ namespace prog
   }
 
   /**
-   * @brief Rotate 90 degrees the image to the right
+   * @brief Rotate the image 90 degrees to the right
    * 
    */
   void Image::rotate_right() {
@@ -211,7 +209,7 @@ namespace prog
         _rotated.at(height_-1-y,x) = at(x,y);
       }
     }
-    //replace the original image by the new image object
+    //replace the original image with the new image object
     _image = _rotated._image;
 
     //swap the width and height;
@@ -219,12 +217,13 @@ namespace prog
   }
 
   /**
-   * @brief Adds a given image to a current image, except a given color
+   * @brief "Pastes" an image on top of the current image, at a given point,
+   * leaving pixels of a given color unchanged
    * 
    * @param image_add Image to be added
    * @param neutral_color Color to be ignored
-   * @param x Top-left x component of the image to be added
-   * @param y Top-left y component of the image to be added
+   * @param x x component of the top-left corner of the space where the image should be added
+   * @param y y component of the top-left corner of the space where the image should be added
    */
   void Image::add(Image *image_add, Color neutral_color, int x, int y) {
       int i_ = 0;
@@ -269,7 +268,7 @@ namespace prog
         int green = Image::median(greens);
         int blue = Image::median(blues);
         
-        //operator= foi implementado no Color
+        //operator= was implemented in class Color
         image[y][x] = Color(red, green, blue);
       }
     }
@@ -277,8 +276,8 @@ namespace prog
   }
 
   /**
-   * @brief Static method tthat calculates the median of a vector of integer. The vector doesn't need
-   * to be ordered
+   * @brief Static method tthat calculates the median of a vector
+   *  of integers. The vector doesn't need to be ordered
    * 
    * @param vetor Vector
    * @return int Median
@@ -292,10 +291,10 @@ namespace prog
   }
 
   /**
-   * @brief Creates a map that maps every different color of the image and assigns every
-   *  color to an ascii character
+   * @brief Creates a map that assigns an ascii character
+   *  to every different color in the image
    * 
-   * @return map<Color, string> The mapping
+   * @return map<Color, string>
    */
   map<Color, string> Image::colorsToASCII() const {
     map<Color, string> ret;

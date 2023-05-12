@@ -5,22 +5,22 @@
 namespace prog
 { 
   /**
-   * @brief unsinged char that represents an rgb_value in the range [0, 255]
+   * @brief unsinged char that represents an rgb value in the range [0, 255]
    * 
    */
   typedef unsigned char rgb_value;
 
   /**
-   * @brief This class is used to represent a color in the RGB representation system
+   * @brief This class is used to represent a color using RGB values
    * 
    */
   class Color
   {
     private:
-    /**
-     * @brief Red component of the Color
-     * 
-     */
+      /**
+       * @brief Red component of the Color
+       * 
+       */
       rgb_value red_;
       /**
        * @brief Green component of the Color
