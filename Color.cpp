@@ -168,27 +168,6 @@ namespace prog {
     }
 
     /**
-     * @brief Color inverter. Every component of the Color is inverted
-     * 
-     */
-    void Color::invert(){
-        red_ = 255 - red_;
-        green_ = 255 - green_;
-        blue_ = 255 - blue_;
-    }
-
-    /**
-     * @brief Converts the color to gray scale
-     * 
-     */
-    void Color::to_gray_scale(){
-        int v = (red_ + green_ + blue_ )/3;
-        red_ = v;
-        green_ = v;
-        blue_ = v;
-    }
-
-    /**
      * @brief Creates a string that corresponds to the hexadecimal
      *  representation of the Color in the format #RRGGBB
      * 

@@ -69,9 +69,13 @@ namespace prog
    */
   void Image::invert() {
     //invert Color of image
+    rgb_value r, g, b;
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
-        at(x, y).invert();
+        r = at(x,y).red();
+        g = at(x,y).green();
+        b = at(x,y).blue();
+        at(x, y) = Color(255 - r, 255 - g, 255 - b);
       }
     }
   }
@@ -100,9 +104,15 @@ namespace prog
    */
   void Image::to_gray_scale() {
     //gray tone of the image
+    rgb_value r, g, b;
+    int v;
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
-        at(x,y).to_gray_scale();
+        r = at(x,y).red();
+        g = at(x,y).green();
+        b = at(x,y).blue();
+        v = (r + g + b )/3;
+        at(x,y) = Color(v, v, v);
       }
     }
   }
