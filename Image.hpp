@@ -14,10 +14,10 @@ namespace prog
   class Image
   {
   private:
-  /**
-   * @brief Width of the image
-   * 
-   */
+    /**
+     * @brief Width of the image
+     * 
+     */
     int width_;
     /**
      * @brief Height of the image

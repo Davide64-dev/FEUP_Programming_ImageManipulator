@@ -7,7 +7,7 @@ using namespace std;
 
 namespace prog {
     /**
-     * @brief Default constructor of the class Color. The color will be assigned with black color
+     * @brief Default constructor of the class Color. Default color is black.
      * 
      */
     Color::Color() {
@@ -18,7 +18,7 @@ namespace prog {
     /**
      * @brief Copy constructor
      * 
-     * @param Color that will be copied
+     * @param Color Color that will be copied
      */
     Color::Color(const Color& other) {
         this->red_ = other.red();
@@ -28,7 +28,7 @@ namespace prog {
     }
 
     /**
-     * @brief Color constructor using the hexadecimal string representation of the color 
+     * @brief Color constructor using the hexadecimal string representation of a color 
      * in the format #RRGGBB
      * 
      * @param hex The hexadecimal representation of the color
@@ -111,11 +111,13 @@ namespace prog {
     }
 
     /**
-     * @brief Override of the operator <. It compares by the parameter red, green and blue, respectivly
+     * @brief Override of the '<' operator. Compares red components,
+     *  then green (if reds are equal), then blue (if greens are also equal)
      * 
-     * @param other Other color that will be compared
-     * @return true If red are larger, dismatching using green and blue, respectivly
-     * @return false otherwise
+     * @param other Color that will be compared
+     * @return true If red value is larger, or if reds are equal and green is larger,
+     *  or if reds and greens are equal and blue is larger
+     * @return false Otherwise
      */
     bool Color::operator<(const Color& other) const{
         if (red_ == other.red()){
@@ -128,9 +130,9 @@ namespace prog {
     }
 
     /**
-     * @brief Overide of the operator ==
+     * @brief Overide of the '==' operator
      * 
-     * @param other Other color that will be compared
+     * @param other Color that will be compared
      * @return true If the red, green and blue components are equal for both colors
      * @return false Otherwise
      */
@@ -139,7 +141,7 @@ namespace prog {
     }
 
     /**
-     * @brief Override of the operator =
+     * @brief Override of the '=' operator
      * 
      * @param other Color that will be assigned
      * @return Color& The assigned Color
@@ -152,10 +154,10 @@ namespace prog {
     }
 
     /**
-     * @brief Override of the operator -\n
-     * It removes the components red, green and blue of a color to the given color
+     * @brief Override of the '-' operator.
+     *  Subtracts the rgb values of 'other' to the color's corresponding values
      * 
-     * @param other Color that will subtract the other Color
+     * @param other Color whose components will be used for subtraction
      * @return Color& The final color
      */
     Color& Color::operator-(const Color& other){
@@ -176,7 +178,7 @@ namespace prog {
     }
 
     /**
-     * @brief Transform the color into a gray scale Color
+     * @brief Converts the color to gray scale
      * 
      */
     void Color::to_gray_scale(){
@@ -187,8 +189,8 @@ namespace prog {
     }
 
     /**
-     * @brief Creates a string that corresponds to the hexadecimal representation of the Color
-     *  in the format #RRGGBB
+     * @brief Creates a string that corresponds to the hexadecimal
+     *  representation of the Color in the format #RRGGBB
      * 
      * @return std::string The hexadecimal representation of the color
      */
@@ -201,11 +203,11 @@ namespace prog {
     }
 
     /**
-     * @brief Transforms an integer value in the range [0 : 255] into an hexadecimal representation in
-     *  a string format
+     * @brief Transforms an integer value in the range [0, 255]
+     *  into its hexadecimal representation in string format
      * 
      * @param num Number to be transformed
-     * @return std::string The number in the hexadecimal numerical system
+     * @return std::string The number's hexadecimal representation
      */
     std::string Color::intToHex(int num){
         string HexCode = "";
