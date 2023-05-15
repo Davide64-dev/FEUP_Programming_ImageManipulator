@@ -110,6 +110,19 @@ namespace prog {
       return this->blue_;
     }
 
+    void Color::invert(){
+        red_ = 255 - red_;
+        green_ = 255 - green_;
+        blue_ = 255 - blue_;
+    }
+
+    void Color::to_gray_scale(){
+        int k = (red_ + green_ + blue_)/3;
+        red_ = k;
+        green_ = k;
+        blue_= k; 
+    }
+
     /**
      * @brief Override of the '<' operator. Compares red components,
      *  then green (if reds are equal), then blue (if greens are also equal)

@@ -21,7 +21,8 @@ namespace prog
    * @brief Destructor. Only use it if we use dynamically allocated memory explicty (we don't)
    * 
    */
-  Image::~Image()=default;
+  Image::~Image(){
+  }
 
  /**
   * @brief Getter of the width of the image
@@ -68,14 +69,9 @@ namespace prog
    * 
    */
   void Image::invert() {
-    //invert Color of image
-    rgb_value r, g, b;
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
-        r = at(x,y).red();
-        g = at(x,y).green();
-        b = at(x,y).blue();
-        at(x, y) = Color(255 - r, 255 - g, 255 - b);
+        at(x,y).invert();
       }
     }
   }
@@ -90,7 +86,6 @@ namespace prog
    * @param _fill Color to be used to fill in
    */
   void Image::fill(int x, int y, int w, int h, const Color& _fill) {
-    //fill with a color partial of the image
     for (int i = y; i < y + h; i++){
       for (int j = x; j < x + w; j++){
         at(j,i) = _fill;
@@ -103,16 +98,9 @@ namespace prog
    * 
    */
   void Image::to_gray_scale() {
-    //gray tone of the image
-    rgb_value r, g, b;
-    int v;
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
-        r = at(x,y).red();
-        g = at(x,y).green();
-        b = at(x,y).blue();
-        v = (r + g + b )/3;
-        at(x,y) = Color(v, v, v);
+        at(x,y).to_gray_scale();
       }
     }
   }
@@ -124,7 +112,6 @@ namespace prog
    * @param _replace The new color
    */
   void Image::replace(Color _original, Color _replace) {
-    //replace all pixels of color1 with color2
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_; x++){
         if (at(x,y) == _original){
@@ -139,7 +126,6 @@ namespace prog
    * 
    */
   void Image::h_mirror() {
-    //horizontal mirror
     for (int y = 0; y < height_; y++){
       for (int x = 0; x < width_ / 2; x++){
         Color temp = at(x,y);
@@ -154,7 +140,6 @@ namespace prog
    * 
    */
   void Image::v_mirror() {
-    //vertical mirror
     for (int y = 0; y < height_ / 2; y++){
       for (int x = 0; x < width_; x++){
         Color temp = at(x,y);
@@ -175,7 +160,6 @@ namespace prog
    * @param h Height of the rectangle
    */
   void Image::crop(int x, int y, int w, int h) {
-    //new image object
     Image _crop(w,h);
     for (int i = y; i < y + h; i++){
       for (int j = x; j < x + w; j++){
@@ -278,7 +262,7 @@ namespace prog
         int green = Image::median(greens);
         int blue = Image::median(blues);
         
-        //operator= was implemented in class Color
+        //operator = was implemented in class Color
         image[y][x] = Color(red, green, blue);
       }
     }

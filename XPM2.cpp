@@ -27,7 +27,6 @@ namespace prog {
             }
         }
 
-
         return image;
     }
 
