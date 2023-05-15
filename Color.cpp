@@ -110,12 +110,20 @@ namespace prog {
       return this->blue_;
     }
 
+    /**
+     * @brief Color inverter. Every component of the Color is inverted
+     * 
+     */
     void Color::invert(){
         red_ = 255 - red_;
         green_ = 255 - green_;
         blue_ = 255 - blue_;
     }
 
+    /**
+     * @brief Converts the color to gray scale
+     * 
+     */
     void Color::to_gray_scale(){
         int k = (red_ + green_ + blue_)/3;
         red_ = k;

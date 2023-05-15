@@ -286,7 +286,7 @@ namespace prog
 
   /**
    * @brief Creates a map that assigns an ascii character
-   *  to every different color in the image
+   *  to each different color in the image
    * 
    * @return map<Color, string>
    */
