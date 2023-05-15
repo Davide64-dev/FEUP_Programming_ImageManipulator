@@ -4,6 +4,13 @@
 #include <unordered_map>
 
 namespace prog {
+
+    /**
+     * @brief Loads image from XPM2 file
+     * 
+     * @param file XPM2 file to be loaded from
+     * @return Image
+     */
     Image* loadFromXPM2(const std::string& file) {
         std::ifstream input(file);
         std::unordered_map<string, Color> char_colors;
@@ -30,6 +37,12 @@ namespace prog {
         return image;
     }
 
+    /**
+     * @brief Saves current image in XPM2 format
+     * 
+     * @param file Path to where XPM2 file will be saved
+     * @param image Image to be saved to XPM2 file
+     */
     void saveToXPM2(const std::string& file, const Image* image) {
         ofstream out(file);
         out << "! XPM2\n";
